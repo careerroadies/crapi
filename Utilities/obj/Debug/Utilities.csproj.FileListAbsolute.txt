@@ -1,0 +1,6 @@
+D:\CareerRoadiesApi\Utilities\bin\Debug\Utilities.dll.config
+D:\CareerRoadiesApi\Utilities\bin\Debug\Utilities.dll
+D:\CareerRoadiesApi\Utilities\bin\Debug\Utilities.pdb
+D:\CareerRoadiesApi\Utilities\obj\Debug\Utilities.dll
+D:\CareerRoadiesApi\Utilities\obj\Debug\Utilities.pdb
+D:\CareerRoadiesApi\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache

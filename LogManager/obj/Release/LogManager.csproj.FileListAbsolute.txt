@@ -1,0 +1,42 @@
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\log4net.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\log4net.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\ResolveAssemblyReference.cache
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\bin\Release\log4net.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\bin\Release\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\bin\Release\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\bin\Release\log4net.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\obj\Release\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\obj\Release\LogManager.pdb
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\LogManager\bin\Release\LogManager.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\LogManager\bin\Release\LogManager.pdb
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\LogManager\bin\Release\log4net.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\LogManager\obj\Release\ResolveAssemblyReference.cache
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\LogManager\obj\Release\LogManager.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\LogManager\obj\Release\LogManager.pdb
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\LogManager\bin\Release\LogManager.pdb
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\LogManager\bin\Release\log4net.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\LogManager\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\LogManager\obj\Release\LogManager.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\bin\Release\LogManager.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\bin\Release\LogManager.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\bin\Release\log4net.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\obj\Release\LogManager.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\obj\Release\LogManager.pdb

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRModelStoreContainer" CdmEntityContainer="CREntities">
+    <EntitySetMapping Name="Demoes">
+      <EntityTypeMapping TypeName="CRModel.Demo">
+        <MappingFragment StoreEntitySet="Demo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="CRModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="added" ColumnName="added" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="contactno" ColumnName="contactno" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

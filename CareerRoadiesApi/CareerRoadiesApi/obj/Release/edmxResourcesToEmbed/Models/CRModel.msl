@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CRModelStoreContainer" CdmEntityContainer="CREntities">
+    <EntitySetMapping Name="addresscategories">
+      <EntityTypeMapping TypeName="CRModel.addresscategory">
+        <MappingFragment StoreEntitySet="addresscategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AddressCategory1" ColumnName="AddressCategory" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bloodgroupmasters">
+      <EntityTypeMapping TypeName="CRModel.bloodgroupmaster">
+        <MappingFragment StoreEntitySet="bloodgroupmaster">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cities">
+      <EntityTypeMapping TypeName="CRModel.city">
+        <MappingFragment StoreEntitySet="city">
+          <ScalarProperty Name="cityid" ColumnName="cityid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="stateid" ColumnName="stateid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classmasters">
+      <EntityTypeMapping TypeName="CRModel.classmaster">
+        <MappingFragment StoreEntitySet="classmaster">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="ClassCode" ColumnName="ClassCode" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="collegemasters">
+      <EntityTypeMapping TypeName="CRModel.collegemaster">
+        <MappingFragment StoreEntitySet="collegemaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="CollegeName" ColumnName="CollegeName" />
+          <ScalarProperty Name="PrincipalName" ColumnName="PrincipalName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WEBUrl" ColumnName="WEBUrl" />
+          <ScalarProperty Name="AboutCollege" ColumnName="AboutCollege" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="AffiliatedUniversity" ColumnName="AffiliatedUniversity" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="companymasters">
+      <EntityTypeMapping TypeName="CRModel.companymaster">
+        <MappingFragment StoreEntitySet="companymaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WEBUrl" ColumnName="WEBUrl" />
+          <ScalarProperty Name="AboutCompany" ColumnName="AboutCompany" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contactcategorymasters">
+      <EntityTypeMapping TypeName="CRModel.contactcategorymaster">
+        <MappingFragment StoreEntitySet="contactcategorymaster">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ContactCategory" ColumnName="ContactCategory" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contacttypemasters">
+      <EntityTypeMapping TypeName="CRModel.contacttypemaster">
+        <MappingFragment StoreEntitySet="contacttypemaster">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="CRModel.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="countrycol" ColumnName="countrycol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="institutemasters">
+      <EntityTypeMapping TypeName="CRModel.institutemaster">
+        <MappingFragment StoreEntitySet="institutemaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="InstituteName" ColumnName="InstituteName" />
+          <ScalarProperty Name="DirectorName" ColumnName="DirectorName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WEBUrl" ColumnName="WEBUrl" />
+          <ScalarProperty Name="AboutCollege" ColumnName="AboutCollege" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="InstituteTypeID" ColumnName="InstituteTypeID" />
+          <ScalarProperty Name="AffiliatedUniversity" ColumnName="AffiliatedUniversity" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logerrors">
+      <EntityTypeMapping TypeName="CRModel.logerror">
+        <MappingFragment StoreEntitySet="logerror">
+          <ScalarProperty Name="LogErrorid" ColumnName="LogErrorid" />
+          <ScalarProperty Name="LogURL" ColumnName="LogURL" />
+          <ScalarProperty Name="LogServerName" ColumnName="LogServerName" />
+          <ScalarProperty Name="LogUserAgent" ColumnName="LogUserAgent" />
+          <ScalarProperty Name="LogUserIP" ColumnName="LogUserIP" />
+          <ScalarProperty Name="LogHostName" ColumnName="LogHostName" />
+          <ScalarProperty Name="LogUserAuthenticated" ColumnName="LogUserAuthenticated" />
+          <ScalarProperty Name="LogMessage" ColumnName="LogMessage" />
+          <ScalarProperty Name="LogSource" ColumnName="LogSource" />
+          <ScalarProperty Name="LogFullMessage" ColumnName="LogFullMessage" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="LogUserName" ColumnName="LogUserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lookupcities">
+      <EntityTypeMapping TypeName="CRModel.lookupcity">
+        <MappingFragment StoreEntitySet="lookupcity">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lookupstates">
+      <EntityTypeMapping TypeName="CRModel.lookupstate">
+        <MappingFragment StoreEntitySet="lookupstate">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="message_notification">
+      <EntityTypeMapping TypeName="CRModel.message_notification">
+        <MappingFragment StoreEntitySet="message_notification">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ContactNO" ColumnName="ContactNO" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="Message_DeliveryStatus" ColumnName="Message DeliveryStatus" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messagetemplates">
+      <EntityTypeMapping TypeName="CRModel.messagetemplate">
+        <MappingFragment StoreEntitySet="messagetemplate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageTemplate1" ColumnName="MessageTemplate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pincodes">
+      <EntityTypeMapping TypeName="CRModel.pincode">
+        <MappingFragment StoreEntitySet="pincodes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pincode1" ColumnName="pincode" />
+          <ScalarProperty Name="divisionname" ColumnName="divisionname" />
+          <ScalarProperty Name="egionname" ColumnName="egionname" />
+          <ScalarProperty Name="circlename" ColumnName="circlename" />
+          <ScalarProperty Name="taluk" ColumnName="taluk" />
+          <ScalarProperty Name="districtname" ColumnName="districtname" />
+          <ScalarProperty Name="statename" ColumnName="statename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="schoolmasters">
+      <EntityTypeMapping TypeName="CRModel.schoolmaster">
+        <MappingFragment StoreEntitySet="schoolmaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="PrincipalName" ColumnName="PrincipalName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WEBUrl" ColumnName="WEBUrl" />
+          <ScalarProperty Name="AboutSchool" ColumnName="AboutSchool" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subjectmasters">
+      <EntityTypeMapping TypeName="CRModel.subjectmaster">
+        <MappingFragment StoreEntitySet="subjectmaster">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="classID" ColumnName="classID" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+          <ScalarProperty Name="SubjectCode" ColumnName="SubjectCode" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="universitymasters">
+      <EntityTypeMapping TypeName="CRModel.universitymaster">
+        <MappingFragment StoreEntitySet="universitymaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="UniversityName" ColumnName="UniversityName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WEBUrl" ColumnName="WEBUrl" />
+          <ScalarProperty Name="AboutUniversity" ColumnName="AboutUniversity" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="UniversityCategory" ColumnName="UniversityCategory" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usercategorymasters">
+      <EntityTypeMapping TypeName="CRModel.usercategorymaster">
+        <MappingFragment StoreEntitySet="usercategorymaster">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserCategory" ColumnName="UserCategory" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userrolemenulinks">
+      <EntityTypeMapping TypeName="CRModel.userrolemenulink">
+        <MappingFragment StoreEntitySet="userrolemenulink">
+          <ScalarProperty Name="UserRoleMenuLinkId" ColumnName="UserRoleMenuLinkId" />
+          <ScalarProperty Name="MenuChildId" ColumnName="MenuChildId" />
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="IsCreate" ColumnName="IsCreate" />
+          <ScalarProperty Name="IsUpdate" ColumnName="IsUpdate" />
+          <ScalarProperty Name="IsView" ColumnName="IsView" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="menumainid" ColumnName="menumainid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="CRModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="confirmpassword" ColumnName="confirmpassword" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="added" ColumnName="added" />
+          <ScalarProperty Name="modified" ColumnName="modified" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="mobilenumber" ColumnName="mobilenumber" />
+          <ScalarProperty Name="refferalid" ColumnName="refferalid" />
+          <ScalarProperty Name="ownrefferalid" ColumnName="ownrefferalid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contactdetails">
+      <EntityTypeMapping TypeName="CRModel.contactdetail">
+        <MappingFragment StoreEntitySet="contactdetails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="STDCode" ColumnName="STDCode" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="ContactCategoryID" ColumnName="ContactCategoryID" />
+          <ScalarProperty Name="ContactTypeID" ColumnName="ContactTypeID" />
+          <ScalarProperty Name="UserCategoryID" ColumnName="UserCategoryID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emaildetails">
+      <EntityTypeMapping TypeName="CRModel.emaildetail">
+        <MappingFragment StoreEntitySet="emaildetails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailCategoryID" ColumnName="EmailCategoryID" />
+          <ScalarProperty Name="UserCategoryID" ColumnName="UserCategoryID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="LastupdatedBy" ColumnName="LastupdatedBy" />
+          <ScalarProperty Name="LastupdatedOn" ColumnName="LastupdatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userprofiles">
+      <EntityTypeMapping TypeName="CRModel.userprofile">
+        <MappingFragment StoreEntitySet="userprofile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="fathername" ColumnName="fathername" />
+          <ScalarProperty Name="mothername" ColumnName="mothername" />
+          <ScalarProperty Name="bloodgroup" ColumnName="bloodgroup" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Anniversory" ColumnName="Anniversory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="states">
+      <EntityTypeMapping TypeName="CRModel.state">
+        <MappingFragment StoreEntitySet="state">
+          <ScalarProperty Name="countryid" ColumnName="countryid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="stateid" ColumnName="stateid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="demoes">
+      <EntityTypeMapping TypeName="CRModel.demo">
+        <MappingFragment StoreEntitySet="demo">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="institutecategories">
+      <EntityTypeMapping TypeName="CRModel.institutecategory">
+        <MappingFragment StoreEntitySet="institutecategory">
+          <ScalarProperty Name="InstituteCategory1" ColumnName="InstituteCategory" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="universitycategories">
+      <EntityTypeMapping TypeName="CRModel.universitycategory">
+        <MappingFragment StoreEntitySet="universitycategory">
+          <ScalarProperty Name="UniversityCategory1" ColumnName="UniversityCategory" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

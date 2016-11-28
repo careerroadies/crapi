@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\CRPublishCode</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/CareerRoadiesApi.dll">
+      <publishTime>07/19/2016 11:23:02</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/07/2016 12:33:03</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>06/07/2016 12:33:03</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>06/30/2016 16:24:09</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.Entity.EF6.dll">
+      <publishTime>10/02/2015 17:05:30</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/09/2016 14:05:25</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>06/09/2016 14:05:25</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>06/09/2016 14:05:25</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>06/09/2016 14:05:25</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/06/2016 18:58:54</publishTime>
+    </File>
+    <File Include="Models/CREntity.edmx.diagram">
+      <publishTime>06/21/2016 13:36:29</publishTime>
+    </File>
+    <File Include="Models/CRModel.edmx.diagram">
+      <publishTime>07/19/2016 11:21:01</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/30/2016 18:02:08</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/18/2016 18:16:12</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

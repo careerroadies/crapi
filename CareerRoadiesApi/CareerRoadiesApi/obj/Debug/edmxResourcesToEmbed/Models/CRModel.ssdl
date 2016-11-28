@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="addresscategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AddressCategory" Type="varchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="bloodgroupmaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BloodGroup" Type="varchar" MaxLength="10" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="cityid" />
+    </Key>
+    <Property Name="cityid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="stateid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="classmaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="ClassName" Type="varchar" MaxLength="100" />
+    <Property Name="ClassCode" Type="varchar" MaxLength="5" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="collegemaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="CollegeName" Type="varchar" MaxLength="500" />
+    <Property Name="PrincipalName" Type="varchar" MaxLength="200" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="WEBUrl" Type="varchar" MaxLength="200" />
+    <Property Name="AboutCollege" Type="varchar" MaxLength="5000" />
+    <Property Name="Address" Type="varchar" MaxLength="600" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="ToDate" Type="date" />
+    <Property Name="AffiliatedUniversity" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="companymaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="500" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="WEBUrl" Type="varchar" MaxLength="200" />
+    <Property Name="AboutCompany" Type="varchar" MaxLength="5000" />
+    <Property Name="Address" Type="varchar" MaxLength="600" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="ToDate" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="contactcategorymaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactCategory" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="contactdetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="varchar" MaxLength="64" />
+    <Property Name="STDCode" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="ContactCategoryID" Type="int" />
+    <Property Name="ContactTypeID" Type="int" />
+    <Property Name="UserCategoryID" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="contacttypemaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactType" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="countryid" />
+    </Key>
+    <Property Name="countryid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" />
+    <Property Name="countrycol" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="demo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="emaildetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="64" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="EmailCategoryID" Type="int" />
+    <Property Name="UserCategoryID" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="FriendsGroupDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="FriendsID" Type="varchar" MaxLength="45" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="FriendsGroupMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="GroupName" Type="varchar" MaxLength="45" />
+    <Property Name="AdminName" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="institutecategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstituteCategory" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="InstituteCollegeAddresDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CollegeID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="100" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="DistrictID" Type="int" Nullable="false" />
+    <Property Name="LocalityVillageID" Type="int" Nullable="false" />
+    <Property Name="PinCode" Type="int" />
+    <Property Name="CreatedOn" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="institutemaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="InstituteName" Type="varchar" MaxLength="500" />
+    <Property Name="DirectorName" Type="varchar" MaxLength="200" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="WEBUrl" Type="varchar" MaxLength="200" />
+    <Property Name="AboutCollege" Type="varchar" MaxLength="5000" />
+    <Property Name="Address" Type="varchar" MaxLength="600" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="ToDate" Type="date" />
+    <Property Name="InstituteTypeID" Type="int" />
+    <Property Name="AffiliatedUniversity" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="logerror">
+    <Key>
+      <PropertyRef Name="LogErrorid" />
+    </Key>
+    <Property Name="LogErrorid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogURL" Type="varchar" MaxLength="200" />
+    <Property Name="LogServerName" Type="varchar" MaxLength="200" />
+    <Property Name="LogUserAgent" Type="varchar" MaxLength="100" />
+    <Property Name="LogUserIP" Type="varchar" MaxLength="100" />
+    <Property Name="LogHostName" Type="varchar" MaxLength="200" />
+    <Property Name="LogUserAuthenticated" Type="bool" />
+    <Property Name="LogMessage" Type="longtext" />
+    <Property Name="LogSource" Type="varchar" MaxLength="100" />
+    <Property Name="LogFullMessage" Type="longtext" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+    <Property Name="LogUserName" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="lookupcity">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="50" />
+    <Property Name="StateID" Type="int" />
+  </EntityType>
+  <EntityType Name="lookupstate">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="CountryID" Type="int" />
+  </EntityType>
+  <EntityType Name="menumaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="url" Type="varchar" MaxLength="200" />
+    <Property Name="parentid" Type="int" />
+    <Property Name="profiletype" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="message_notification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactNO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StudentId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MessageText" Type="varchar" MaxLength="1000" />
+    <Property Name="Message DeliveryStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Error" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="messagetemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageTemplate" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="pincodes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pincode" Type="varchar" MaxLength="50" />
+    <Property Name="divisionname" Type="varchar" MaxLength="100" />
+    <Property Name="egionname" Type="varchar" MaxLength="100" />
+    <Property Name="circlename" Type="varchar" MaxLength="100" />
+    <Property Name="taluk" Type="varchar" MaxLength="100" />
+    <Property Name="districtname" Type="varchar" MaxLength="100" />
+    <Property Name="statename" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SchoolAddresDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SchoolID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="100" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="DistrictID" Type="int" Nullable="false" />
+    <Property Name="LocalityVillageID" Type="int" Nullable="false" />
+    <Property Name="PinCode" Type="int" />
+    <Property Name="CreatedOn" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="schoolmaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="SchoolName" Type="varchar" MaxLength="500" />
+    <Property Name="PrincipalName" Type="varchar" MaxLength="200" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="WEBUrl" Type="varchar" MaxLength="200" />
+    <Property Name="AboutSchool" Type="varchar" MaxLength="5000" />
+    <Property Name="Address" Type="varchar" MaxLength="600" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="ToDate" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="state">
+    <Key>
+      <PropertyRef Name="stateid" />
+    </Key>
+    <Property Name="stateid" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" />
+    <Property Name="countryid" Type="int" />
+  </EntityType>
+  <EntityType Name="subjectmaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="classID" Type="varchar" MaxLength="10" />
+    <Property Name="SubjectName" Type="varchar" MaxLength="500" />
+    <Property Name="SubjectCode" Type="varchar" MaxLength="5" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="universitycategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UniversityCategory" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="universitymaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="UniversityName" Type="varchar" MaxLength="500" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="WEBUrl" Type="varchar" MaxLength="200" />
+    <Property Name="AboutUniversity" Type="varchar" MaxLength="5000" />
+    <Property Name="Address" Type="varchar" MaxLength="600" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="ToDate" Type="date" />
+    <Property Name="UniversityCategory" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="UserAddresDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="100" />
+    <Property Name="StateID" Type="int" Nullable="false" />
+    <Property Name="DistrictID" Type="int" Nullable="false" />
+    <Property Name="LocalityVillageID" Type="int" Nullable="false" />
+    <Property Name="PinCode" Type="int" />
+    <Property Name="AddressCategoryID" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="usercategorymaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCategory" Type="varchar" MaxLength="10" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+  </EntityType>
+  <EntityType Name="UserFriendsMapping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="45" />
+    <Property Name="FriendsID" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="userprofile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="64" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" />
+    <Property Name="middlename" Type="varchar" MaxLength="50" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" />
+    <Property Name="fathername" Type="varchar" MaxLength="150" />
+    <Property Name="mothername" Type="varchar" MaxLength="150" />
+    <Property Name="bloodgroup" Type="char" MaxLength="10" />
+    <Property Name="dob" Type="date" />
+    <Property Name="MaritalStatus" Type="bool" />
+    <Property Name="Anniversory" Type="date" />
+  </EntityType>
+  <EntityType Name="UserRefferalMapping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="45" />
+    <Property Name="UserOwnRefferalID" Type="varchar" MaxLength="45" />
+    <Property Name="RefferalUserID" Type="varchar" MaxLength="45" />
+    <Property Name="RefferalID" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="userrolemenulink">
+    <Key>
+      <PropertyRef Name="UserRoleMenuLinkId" />
+      <PropertyRef Name="MenuChildId" />
+      <PropertyRef Name="UserRoleId" />
+    </Key>
+    <Property Name="UserRoleMenuLinkId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuChildId" Type="int" Nullable="false" />
+    <Property Name="UserRoleId" Type="int" Nullable="false" />
+    <Property Name="IsCreate" Type="bool" />
+    <Property Name="IsUpdate" Type="bool" />
+    <Property Name="IsView" Type="bool" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="CreatedOn" Type="datetime" Precision="0" />
+    <Property Name="LastupdatedBy" Type="varchar" MaxLength="64" />
+    <Property Name="LastupdatedOn" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="IsActive" Type="bool" />
+    <Property Name="IsDeleted" Type="bool" />
+    <Property Name="menumainid" Type="int" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="confirmpassword" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="added" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="modified" Type="datetime" Precision="0" />
+    <Property Name="active" Type="bool" />
+    <Property Name="mobilenumber" Type="varchar" MaxLength="12" />
+    <Property Name="refferalid" Type="int" />
+    <Property Name="ownrefferalid" Type="int" />
+  </EntityType>
+  <Association Name="FK_LookupCity_LookupState">
+    <End Role="lookupstate" Type="Self.lookupstate" Multiplicity="0..1" />
+    <End Role="lookupcity" Type="Self.lookupcity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lookupstate">
+        <PropertyRef Name="StateID" />
+      </Principal>
+      <Dependent Role="lookupcity">
+        <PropertyRef Name="StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_state_country">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="state" Type="Self.state" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="state">
+        <PropertyRef Name="countryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Getmenu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="careerroadies">
+    <Parameter Name="p_profiletype" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="CRModelStoreContainer">
+    <EntitySet Name="addresscategory" EntityType="Self.addresscategory" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="bloodgroupmaster" EntityType="Self.bloodgroupmaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="city" EntityType="Self.city" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="classmaster" EntityType="Self.classmaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="collegemaster" EntityType="Self.collegemaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="companymaster" EntityType="Self.companymaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="contactcategorymaster" EntityType="Self.contactcategorymaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="contactdetails" EntityType="Self.contactdetails" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="contacttypemaster" EntityType="Self.contacttypemaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="country" EntityType="Self.country" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="demo" EntityType="Self.demo" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="emaildetails" EntityType="Self.emaildetails" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="FriendsGroupDetails" EntityType="Self.FriendsGroupDetails" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="FriendsGroupMaster" EntityType="Self.FriendsGroupMaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="institutecategory" EntityType="Self.institutecategory" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="InstituteCollegeAddresDetails" EntityType="Self.InstituteCollegeAddresDetails" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="institutemaster" EntityType="Self.institutemaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="logerror" EntityType="Self.logerror" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="lookupcity" EntityType="Self.lookupcity" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="lookupstate" EntityType="Self.lookupstate" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="menumaster" EntityType="Self.menumaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="message_notification" EntityType="Self.message_notification" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="messagetemplate" EntityType="Self.messagetemplate" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="pincodes" EntityType="Self.pincodes" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="SchoolAddresDetails" EntityType="Self.SchoolAddresDetails" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="schoolmaster" EntityType="Self.schoolmaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="state" EntityType="Self.state" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="subjectmaster" EntityType="Self.subjectmaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="universitycategory" EntityType="Self.universitycategory" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="universitymaster" EntityType="Self.universitymaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="UserAddresDetails" EntityType="Self.UserAddresDetails" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="usercategorymaster" EntityType="Self.usercategorymaster" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="UserFriendsMapping" EntityType="Self.UserFriendsMapping" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="userprofile" EntityType="Self.userprofile" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="UserRefferalMapping" EntityType="Self.UserRefferalMapping" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="userrolemenulink" EntityType="Self.userrolemenulink" Schema="careerroadies" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="careerroadies" store:Type="Tables" />
+    <AssociationSet Name="FK_LookupCity_LookupState" Association="Self.FK_LookupCity_LookupState">
+      <End Role="lookupstate" EntitySet="lookupstate" />
+      <End Role="lookupcity" EntitySet="lookupcity" />
+    </AssociationSet>
+    <AssociationSet Name="fk_state_country" Association="Self.fk_state_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="state" EntitySet="state" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="addresscategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddressCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="bloodgroupmaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BloodGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="cityid" />
+    </Key>
+    <Property Name="cityid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stateid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="classmaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ClassCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="collegemaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CollegeName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PrincipalName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WEBUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AboutCollege" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="AffiliatedUniversity" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="companymaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WEBUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AboutCompany" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="contactcategorymaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="contacttypemaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="countryid" />
+    </Key>
+    <Property Name="countryid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="countrycol" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="states" Relationship="CRModel.fk_state_country" FromRole="country" ToRole="state" />
+  </EntityType>
+  <EntityType Name="institutemaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="InstituteName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DirectorName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WEBUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AboutCollege" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="InstituteTypeID" Type="Int32" />
+    <Property Name="AffiliatedUniversity" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="logerror">
+    <Key>
+      <PropertyRef Name="LogErrorid" />
+    </Key>
+    <Property Name="LogErrorid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LogServerName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LogUserAgent" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LogUserIP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LogHostName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LogUserAuthenticated" Type="Boolean" />
+    <Property Name="LogMessage" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="LogSource" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LogFullMessage" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="LogUserName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="lookupcity">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StateID" Type="Int32" />
+    <NavigationProperty Name="lookupstate" Relationship="Self.FK_LookupCity_LookupState" FromRole="lookupcity" ToRole="lookupstate" />
+  </EntityType>
+  <EntityType Name="lookupstate">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryID" Type="Int32" />
+    <NavigationProperty Name="lookupcities" Relationship="Self.FK_LookupCity_LookupState" FromRole="lookupstate" ToRole="lookupcity" />
+  </EntityType>
+  <EntityType Name="message_notification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StudentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MessageText" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Message_DeliveryStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Error" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="messagetemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageTemplate1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pincode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pincode1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="divisionname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="egionname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="circlename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="taluk" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="districtname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="statename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="schoolmaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PrincipalName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WEBUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AboutSchool" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="subjectmaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="classID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SubjectName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SubjectCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="universitymaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="UniversityName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WEBUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AboutUniversity" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="FromDate" Type="DateTime" />
+    <Property Name="ToDate" Type="DateTime" />
+    <Property Name="UniversityCategory" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="usercategorymaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserCategory" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="userrolemenulink">
+    <Key>
+      <PropertyRef Name="UserRoleMenuLinkId" />
+      <PropertyRef Name="MenuChildId" />
+      <PropertyRef Name="UserRoleId" />
+    </Key>
+    <Property Name="UserRoleMenuLinkId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuChildId" Type="Int32" Nullable="false" />
+    <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+    <Property Name="IsCreate" Type="Boolean" />
+    <Property Name="IsUpdate" Type="Boolean" />
+    <Property Name="IsView" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="menumainid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="confirmpassword" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="added" Type="DateTime" Nullable="false" />
+    <Property Name="modified" Type="DateTime" />
+    <Property Name="active" Type="Boolean" />
+    <Property Name="mobilenumber" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="refferalid" Type="Int32" />
+    <Property Name="ownrefferalid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="contactdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="STDCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactCategoryID" Type="Int32" />
+    <Property Name="ContactTypeID" Type="Int32" />
+    <Property Name="UserCategoryID" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="emaildetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailCategoryID" Type="Int32" />
+    <Property Name="UserCategoryID" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="LastupdatedBy" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LastupdatedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="userprofile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="userid" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middlename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fathername" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="mothername" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="bloodgroup" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="dob" Type="DateTime" />
+    <Property Name="MaritalStatus" Type="Boolean" />
+    <Property Name="Anniversory" Type="DateTime" />
+  </EntityType>
+  <Association Name="FK_LookupCity_LookupState">
+    <End Role="lookupstate" Type="Self.lookupstate" Multiplicity="0..1" />
+    <End Role="lookupcity" Type="Self.lookupcity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lookupstate">
+        <PropertyRef Name="StateID" />
+      </Principal>
+      <Dependent Role="lookupcity">
+        <PropertyRef Name="StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="addresscategories" EntityType="Self.addresscategory" />
+    <EntitySet Name="bloodgroupmasters" EntityType="Self.bloodgroupmaster" />
+    <EntitySet Name="cities" EntityType="Self.city" />
+    <EntitySet Name="classmasters" EntityType="Self.classmaster" />
+    <EntitySet Name="collegemasters" EntityType="Self.collegemaster" />
+    <EntitySet Name="companymasters" EntityType="Self.companymaster" />
+    <EntitySet Name="contactcategorymasters" EntityType="Self.contactcategorymaster" />
+    <EntitySet Name="contacttypemasters" EntityType="Self.contacttypemaster" />
+    <EntitySet Name="countries" EntityType="Self.country" />
+    <EntitySet Name="institutemasters" EntityType="Self.institutemaster" />
+    <EntitySet Name="logerrors" EntityType="Self.logerror" />
+    <EntitySet Name="lookupcities" EntityType="Self.lookupcity" />
+    <EntitySet Name="lookupstates" EntityType="Self.lookupstate" />
+    <EntitySet Name="message_notification" EntityType="Self.message_notification" />
+    <EntitySet Name="messagetemplates" EntityType="Self.messagetemplate" />
+    <EntitySet Name="pincodes" EntityType="Self.pincode" />
+    <EntitySet Name="schoolmasters" EntityType="Self.schoolmaster" />
+    <EntitySet Name="subjectmasters" EntityType="Self.subjectmaster" />
+    <EntitySet Name="universitymasters" EntityType="Self.universitymaster" />
+    <EntitySet Name="usercategorymasters" EntityType="Self.usercategorymaster" />
+    <EntitySet Name="userrolemenulinks" EntityType="Self.userrolemenulink" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="contactdetails" EntityType="Self.contactdetail" />
+    <EntitySet Name="emaildetails" EntityType="Self.emaildetail" />
+    <EntitySet Name="userprofiles" EntityType="Self.userprofile" />
+    <AssociationSet Name="FK_LookupCity_LookupState" Association="Self.FK_LookupCity_LookupState">
+      <End Role="lookupstate" EntitySet="lookupstates" />
+      <End Role="lookupcity" EntitySet="lookupcities" />
+    </AssociationSet>
+    <EntitySet Name="states" EntityType="CRModel.state" />
+    <AssociationSet Name="fk_state_country" Association="CRModel.fk_state_country">
+      <End Role="country" EntitySet="countries" />
+      <End Role="state" EntitySet="states" />
+    </AssociationSet>
+    <EntitySet Name="demoes" EntityType="CRModel.demo" />
+    <EntitySet Name="institutecategories" EntityType="CRModel.institutecategory" />
+    <EntitySet Name="universitycategories" EntityType="CRModel.universitycategory" />
+  </EntityContainer>
+  <EntityType Name="state">
+    <Key>
+      <PropertyRef Name="stateid" />
+    </Key>
+    <Property Name="stateid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="countryid" Type="Int32" />
+    <NavigationProperty Name="country" Relationship="CRModel.fk_state_country" FromRole="state" ToRole="country" />
+  </EntityType>
+  <Association Name="fk_state_country">
+    <End Type="CRModel.country" Role="country" Multiplicity="0..1" />
+    <End Type="CRModel.state" Role="state" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="countryid" />
+      </Principal>
+      <Dependent Role="state">
+        <PropertyRef Name="countryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="demo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="institutecategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstituteCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="universitycategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UniversityCategory1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

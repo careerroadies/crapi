@@ -1,0 +1,91 @@
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\log4net.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\log4net.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\log4net.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\log4net.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Release\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\log4net.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\LogManager.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\bin\Release\LogManager.pdb
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.dll
+D:\Desktop\JT\JTMATCHING-71\MatchingWebService - JTMATCHING 71\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\log4net.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Release\LogManager.pdb
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Documents and Settings\Santosh\Desktop\JT_ChangeConnectionString\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\log4net.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\LogManager.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.Configuration.Design.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Release\LogManager.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\obj\Release\DataAccessLayer.pdb

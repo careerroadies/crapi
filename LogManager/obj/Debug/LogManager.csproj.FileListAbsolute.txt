@@ -1,0 +1,59 @@
+C:\Abhishek\JobTarget\LogManager\LogManager\bin\Debug\LogManager.dll
+C:\Abhishek\JobTarget\LogManager\LogManager\bin\Debug\LogManager.pdb
+C:\Abhishek\JobTarget\LogManager\LogManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Abhishek\JobTarget\LogManager\LogManager\obj\Debug\LogManager.dll
+C:\Abhishek\JobTarget\LogManager\LogManager\obj\Debug\LogManager.pdb
+D:\My Projects\JT Matching Engine App\LogManager\LogManager\bin\Debug\LogManager.dll
+D:\My Projects\JT Matching Engine App\LogManager\LogManager\bin\Debug\LogManager.pdb
+D:\My Projects\JT Matching Engine App\LogManager\LogManager\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\JT Matching Engine App\LogManager\LogManager\obj\Debug\LogManager.dll
+D:\My Projects\JT Matching Engine App\LogManager\LogManager\obj\Debug\LogManager.pdb
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\LogManager\LogManager\bin\Debug\LogManager.dll
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\LogManager\LogManager\bin\Debug\LogManager.pdb
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\LogManager\LogManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\LogManager\LogManager\obj\Debug\LogManager.dll
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\LogManager\LogManager\obj\Debug\LogManager.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\ResolveAssemblyReference.cache
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.pdb
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.dll
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\LogManager\bin\Debug\LogManager.pdb
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\LogManager\obj\Debug\ResolveAssemblyReference.cache
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.dll
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\LogManager\obj\Debug\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\bin\Debug\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\bin\Debug\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\obj\Debug\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\LogManager\obj\Debug\LogManager.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\bin\Debug\LogManager.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\bin\Debug\LogManager.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\obj\Debug\LogManager.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\LogManager\obj\Debug\LogManager.pdb
+D:\Matching\MatchingWebServiceProd\LogManager\bin\Debug\LogManager.dll
+D:\Matching\MatchingWebServiceProd\LogManager\bin\Debug\LogManager.pdb
+D:\Matching\MatchingWebServiceProd\LogManager\obj\Debug\ResolveAssemblyReference.cache
+D:\Matching\MatchingWebServiceProd\LogManager\obj\Debug\LogManager.dll
+D:\Matching\MatchingWebServiceProd\LogManager\obj\Debug\LogManager.pdb
+D:\MatchingWebServiceProd\LogManager\bin\Debug\LogManager.dll
+D:\MatchingWebServiceProd\LogManager\bin\Debug\LogManager.pdb
+D:\MatchingWebServiceProd\LogManager\obj\Debug\LogManager.dll
+D:\MatchingWebServiceProd\LogManager\obj\Debug\LogManager.pdb
+D:\MatchingWebServiceProd\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+D:\CareerRoadiesApi\LogManager\bin\Debug\LogManager.dll
+D:\CareerRoadiesApi\LogManager\bin\Debug\LogManager.pdb
+D:\CareerRoadiesApi\LogManager\obj\Debug\LogManager.dll
+D:\CareerRoadiesApi\LogManager\obj\Debug\LogManager.pdb

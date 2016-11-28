@@ -1,0 +1,93 @@
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\bin\Debug\ExceptionManager.dll
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\bin\Debug\log4net.dll
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\bin\Debug\LogManager.dll
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\bin\Debug\ExceptionManager.pdb
+C:\Abhishek\JobTarget\DataAccessLayer\DataAccessLayer\bin\Debug\LogManager.pdb
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\ExceptionManager.dll
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\log4net.dll
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\LogManager.dll
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\ExceptionManager.pdb
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\LogManager.pdb
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\My Projects\JT Matching Engine App\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\ExceptionManager.dll
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\log4net.dll
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\LogManager.dll
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\ExceptionManager.pdb
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\bin\Debug\LogManager.pdb
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Abhishek\JobTarget\JT Matching Engine App\JT Matching Engine App\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.pdb
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Abhishek\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.pdb
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\Desktop\JT\from desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.dll
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.pdb
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\JobTarget\8-7-20111\MatchingWebService\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\bin\Debug\LogManager.pdb
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\dell\Desktop\MatchingWebService - Copy\MatchingWebService\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Debug\LogManager.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\bin\Debug\LogManager.pdb
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\dell\Desktop\connstring\MatchingWebServiceProd\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\Matching\MatchingWebServiceProd\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Matching\MatchingWebServiceProd\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Matching\MatchingWebServiceProd\DataAccessLayer\bin\Debug\LogManager.dll
+D:\Matching\MatchingWebServiceProd\DataAccessLayer\bin\Debug\LogManager.pdb
+D:\Matching\MatchingWebServiceProd\DataAccessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Matching\MatchingWebServiceProd\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\Matching\MatchingWebServiceProd\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\MatchingWebServiceProd\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\MatchingWebServiceProd\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\MatchingWebServiceProd\DataAccessLayer\bin\Debug\LogManager.dll
+D:\MatchingWebServiceProd\DataAccessLayer\bin\Debug\LogManager.pdb
+D:\MatchingWebServiceProd\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\MatchingWebServiceProd\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\MatchingWebServiceProd\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\CareerRoadiesApi\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\CareerRoadiesApi\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\CareerRoadiesApi\DataAccessLayer\bin\Debug\LogManager.dll
+D:\CareerRoadiesApi\DataAccessLayer\bin\Debug\LogManager.pdb
+D:\CareerRoadiesApi\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\CareerRoadiesApi\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\CareerRoadiesApi\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
