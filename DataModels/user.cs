@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataModels
 {
+    // This is the user model.
     public class user
     {
         public int user_id;
