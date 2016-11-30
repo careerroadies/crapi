@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataModels
 {
+    // This is profile class. which contains two more classes for save the basic details and address. 
     public class profile
     {
 
