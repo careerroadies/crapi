@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="CommonApplicationService.cs" />
     <Compile Include="ProfileApplicationService.cs" />
+    <Compile Include="ProfileBusinessRules.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserApplicationService.cs" />
     <Compile Include="UserBusinessRules.cs" />

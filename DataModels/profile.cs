@@ -14,31 +14,33 @@ namespace DataModels
 
     public class BasicProfileDetails
     {
-        string ProfileId { get; set; }
-        string UserId { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        string Dob { get; set; }
-        string MobileNumber { get; set; }
-        string PrimaryEmail { get; set; }
-        string AlternateEmail { get; set; }
-        string Gender { get; set; }
-        string MaritalStatus { get; set; }
-        string ProfilePicture { get; set; }
-        string ProfileText { get; set; }    
+       public string ProfileId { get; set; }
+       public string UserId { get; set; }
+       public string FirstName { get; set; }
+       public string LastName { get; set; }
+       public string Dob { get; set; }
+       public string MobileNumber { get; set; }
+       public string PrimaryEmail { get; set; }
+       public string AlternateEmail { get; set; }
+       public string Gender { get; set; }
+       public string MaritalStatus { get; set; }
+       public string ProfilePicture { get; set; }
+       public string ProfileText { get; set; }
+       public string Active { get; set; }
+       public string stype { get; set; }   
     }
 
     public class profileAddressDetails
     {
-        string ProfileId { get; set; }
-        string Id { get; set; }
-        string AddressLine1 { get; set; }
-        string AddressLine2 { get; set; }
-        string Landmark { get; set; }
-        string Locality { get; set; }
-        string Pincode { get; set; }
-        int CityID { get; set; }
-        int StateID { get; set; }
-        int AddressCategoryID { get; set; }
+        public string ProfileId { get; set; }
+        public string Id { get; set; }
+        public string AddressLine1 { get; set; }
+        public string AddressLine2 { get; set; }
+        public string Landmark { get; set; }
+        public string Locality { get; set; }
+        public string Pincode { get; set; }
+        public int CityID { get; set; }
+        public int StateID { get; set; }
+        public int AddressCategoryID { get; set; }
     }
 }

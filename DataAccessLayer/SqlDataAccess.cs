@@ -15,6 +15,7 @@ using System.Threading;
 using LogManager;
 using log4net;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace DataAccessLayer
 {
@@ -133,12 +134,6 @@ namespace DataAccessLayer
                 oCmd.Parameters.Add(new MySqlParameter("?_userid", MySqlDbType.String));
                 oCmd.Parameters["?_userid"].Direction = ParameterDirection.Output;
 
-                //oCmd.Parameters.AddWithValue("?_ownrefferalid", MySqlDbType.String);
-                //oCmd.Parameters["?_ownrefferalid"].Direction = ParameterDirection.Output;
-
-                //oCmd.Parameters.AddWithValue("?_userid", MySqlDbType.String);
-                //oCmd.Parameters["?_userid"].Direction = ParameterDirection.Output;
-
                 oCmd.ExecuteNonQuery();
 
                 ref_id = oCmd.Parameters["?_ownrefferalid"].Value.ToString();
@@ -146,6 +141,50 @@ namespace DataAccessLayer
 
                 DateTime dtStart = DateTime.Now;
                 
+                TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
+            }
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+
+        public void ExecuteNonQuery(string cmdText, string[,] arrParam, List<string> arrParamOut, out List<KeyValuePair<string, string>> output)
+        {
+            MySqlConnection conn = new MySqlConnection();
+            conn = GetConnection();
+            DataSet dsDataSet = new DataSet();
+            output = new List<KeyValuePair<string, string>>();
+            try
+            {
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
+                oCmd.CommandType = CommandType.StoredProcedure;
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
+
+                for (Int16 i = 0; i < arrParam.GetLength(0); i++)
+                    oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
+
+                foreach(var item in arrParamOut)
+                {
+                    oCmd.Parameters.Add(new MySqlParameter("?" + item + "", MySqlDbType.String));
+                    oCmd.Parameters["?" + item + ""].Direction = ParameterDirection.Output;
+                }
+
+                oCmd.ExecuteNonQuery();
+                foreach (var item in arrParamOut)
+                {
+                    output.Add(new KeyValuePair<String, String>(item, oCmd.Parameters["?" + item + ""].Value.ToString()));
+                }
+                DateTime dtStart = DateTime.Now;
+
                 TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
                 logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
             }

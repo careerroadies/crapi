@@ -21,9 +21,38 @@ namespace ApplicationService
             _profileservice = profiledataservice;
         }
 
-        public string saveprofile(userprofile _userprofile)
+        public string saveprofile(BasicProfileDetails _userprofile, out TransactionalInformation transaction)
         {
-            var savestatus = profileservice.SaveProfile(_userprofile);
+            var savestatus = "";
+            transaction = new TransactionalInformation();
+            try
+            {
+                ProfileBusinessRules profilebusinessrules = new ProfileBusinessRules();
+                profilebusinessrules.ValidateProfile(_userprofile, profileservice);
+                if (profilebusinessrules.ValidationStatus == true)
+                {
+                    savestatus = profileservice.SaveProfile(_userprofile);
+                    transaction.ReturnStatus = true;
+                    transaction.ReturnMessage.Add("Profile registered successfully.");
+                }
+                else
+                {
+                    transaction.ReturnStatus = profilebusinessrules.ValidationStatus;
+                    transaction.ReturnMessage = profilebusinessrules.ValidationMessage;
+                    transaction.ValidationErrors = profilebusinessrules.ValidationErrors;
+                }
+                
+
+            }
+            catch (Exception ex)
+            {
+                transaction.ReturnMessage = new List<string>();
+                string errorMessage = ex.Message;
+                transaction.ReturnStatus = false;
+                transaction.ReturnMessage.Add(errorMessage);
+            }
+        
+            
             return savestatus;
         }
     }

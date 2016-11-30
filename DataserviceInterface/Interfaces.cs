@@ -17,8 +17,8 @@ namespace DataserviceInterface
     public interface IProfileService
     {
         List<userprofile> GetProfiles();
-        userprofile GetProfile(int profileid);
-        string SaveProfile(userprofile userprofile);
+        BasicProfileDetails GetProfile(int profileid);
+        string SaveProfile(BasicProfileDetails userprofile);
     }
 
     public interface IuserService

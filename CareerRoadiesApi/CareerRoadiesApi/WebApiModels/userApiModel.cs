@@ -32,4 +32,22 @@ namespace CareerRoadiesApi.WebApiModels
         public string password { get;set;}
         public string usertypeid { get; set; }
     }
+
+    public class BasicProfileDetailsDTO
+    {
+        public string ProfileId { get; set; }
+        public string UserId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Dob { get; set; }
+        public string MobileNumber { get; set; }
+        public string PrimaryEmail { get; set; }
+        public string AlternateEmail { get; set; }
+        public string Gender { get; set; }
+        public string MaritalStatus { get; set; }
+        public string ProfilePicture { get; set; }
+        public string ProfileText { get; set; }
+        public string Active { get; set; }
+        public string stype { get; set; }
+    }
 }

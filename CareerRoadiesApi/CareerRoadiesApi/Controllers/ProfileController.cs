@@ -5,6 +5,7 @@ using DataService;
 using DataserviceInterface;
 using ApplicationService;
 using DataModels;
+using CareerRoadiesApi.WebApiModels;
 
 namespace CareerRoadiesApi.Controllers
 {
@@ -18,10 +19,12 @@ namespace CareerRoadiesApi.Controllers
         }   
 
         [HttpPost]
-        public HttpResponseMessage saveprofile(userprofile p)
+        public HttpResponseMessage saveprofile(BasicProfileDetailsDTO p)
         {
             pas = new ProfileApplicationService(_profileService);
-            var result = pas.saveprofile(p);
+            BasicProfileDetails bpd = new BasicProfileDetails();
+
+            var result = pas.saveprofile(bpd);
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
     }
