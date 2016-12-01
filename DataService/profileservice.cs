@@ -12,7 +12,7 @@ namespace DataService
     {
       BasicProfileDetails objprofile = new BasicProfileDetails();
         SqlDataAccess obj = new SqlDataAccess();
-        public List<userprofile> GetProfiles()
+        public List<BasicProfileDetails> GetProfiles()
         {
             return null;
         }
@@ -64,17 +64,17 @@ namespace DataService
             arrParam[11, 0] = "_gender";
             arrParam[11, 1] = userprofile.Gender.ToString();
 
-            arrParam[12, 0] = "_active";
-            arrParam[12, 1] = userprofile.Active.ToString();
+            arrParam[12, 0] = "_status";
+            arrParam[12, 1] = userprofile.Status.ToString();
 
-            arrParam[13, 0] = "stype";
+            arrParam[13, 0] = "_stype";
             arrParam[13, 1] = userprofile.stype.ToString();
 
             var result = obj.ExecuteDataTable(strQuery, arrParam);
             if (result.Rows.Count>0)
             {
-                if (!string.IsNullOrEmpty(result.Rows[0]["profile_id"].ToString()))
-                        profile_id = result.Rows[0]["profile_id"].ToString();
+                if (!string.IsNullOrEmpty(result.Rows[0]["uuid"].ToString()))
+                    profile_id = result.Rows[0]["uuid"].ToString();
 
             }
             return profile_id;

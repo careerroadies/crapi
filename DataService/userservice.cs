@@ -84,6 +84,7 @@ namespace DataService
             var result = obj.ExecuteDataTable(strQuery, arrParam);
             if (result.Rows.Count > 0)
             {
+                userobj.user_id = result.Rows[0]["user_id"].ToString();
                 userobj.email = result.Rows[0]["email"].ToString();
                 userobj.mobilenumber = result.Rows[0]["mobilenumber"].ToString();
                 userobj.ownrefferalid = result.Rows[0]["ownrefferalid"].ToString();

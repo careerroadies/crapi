@@ -68,7 +68,7 @@ namespace CareerRoadiesApi.Controllers
             }
             userapimodel.ReturnStatus = transaction.ReturnStatus;
             userapimodel.IsAuthenicated = true;
-            userapimodel.ReturnMessage.Add("Login successful.");
+            userapimodel.ReturnMessage.Add("Login successfull.");
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }

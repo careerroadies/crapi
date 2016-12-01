@@ -22,11 +22,11 @@ namespace ApplicationService
         {
             profiledataservice = profileservice;
             InitializeValidationRules(profile);
-            ValidateRequired("firstname", "First Name");
-            ValidateRequired("lastname", "Last Name");
-            ValidateRequired("gender", "Gender");
-            ValidateEmailAddress("primaryemail", "Primary Email");
-            ValidateEmailAddress("alternateemail", "Alternate Email");
+            ValidateRequired("FirstName", "First Name");
+            ValidateRequired("LastName", "Last Name");
+            ValidateRequired("Gender", "Gender");
+            ValidateEmailAddress("PrimaryEmail", "Primary Email");
+            ValidateEmailAddress("AlternateEmail", "Alternate Email");
         }
 
     }

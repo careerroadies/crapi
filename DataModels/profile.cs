@@ -26,7 +26,7 @@ namespace DataModels
        public string MaritalStatus { get; set; }
        public string ProfilePicture { get; set; }
        public string ProfileText { get; set; }
-       public string Active { get; set; }
+       public string Status { get; set; }
        public string stype { get; set; }   
     }
 

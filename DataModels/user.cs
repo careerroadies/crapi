@@ -9,7 +9,7 @@ namespace DataModels
     // This is the user model.
     public class user
     {
-        public int user_id;
+        public string user_id {get;set;}
         public string username { get; set; }
         public string password { get; set; }
         public string email { get; set; }
