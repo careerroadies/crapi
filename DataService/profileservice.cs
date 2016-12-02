@@ -22,7 +22,6 @@ namespace DataService
             return null;
         }
 
-
         public string SaveProfile(BasicProfileDetails userprofile)
         {
             string profile_id = string.Empty;
