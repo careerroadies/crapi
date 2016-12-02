@@ -10,18 +10,20 @@ using System.Data.Entity.Infrastructure;
 using DataService;
 using DataserviceInterface;
 using ApplicationService;
+using DataModels;
+using CareerRoadiesApi.WebApiModels;
 
 
 namespace CareerRoadiesApi.Controllers
 {
     public class CommonController : ApiController
     {
-      //  private CREntities db = new CREntities();
+        //  private CREntities db = new CREntities();
         Icommonservice commondataservice;
         // GET api/common
         public CommonController()
         {
-                commondataservice = new commondataservice();
+            commondataservice = new commondataservice();
         }
         [HttpGet]
         public string GetTest()
@@ -56,25 +58,48 @@ namespace CareerRoadiesApi.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-      /*  //[HttpGet]
+        [HttpGet]
+        public HttpResponseMessage GetState()
+        {
+            TransactionalInformation transaction = new TransactionalInformation();
+            CommonApplicationService commonBusinessService;
+            commonBusinessService = new CommonApplicationService(commondataservice);
+            userApiModel userapimodel = new userApiModel();
+
+            var result = commonBusinessService.GetState(out transaction);
+            if (transaction.ReturnStatus == false)
+            {
+                userapimodel.ReturnMessage = transaction.ReturnMessage;
+                userapimodel.ReturnStatus = transaction.ReturnStatus;
+                var badResponse = Request.CreateResponse<userApiModel>(HttpStatusCode.BadRequest, userapimodel);
+                return badResponse;
+
+            }
+            userapimodel.ReturnStatus = transaction.ReturnStatus;
+            userapimodel.IsAuthenicated = true;
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+        [HttpGet]
         public HttpResponseMessage GetCity(int id)
         {
-            var result = db.cities.Where(a => a.stateid == id).Select(x => new { x.name, x.cityid }).OrderBy(o => o.name).ToList();
+            TransactionalInformation transaction = new TransactionalInformation();
+            CommonApplicationService commonBusinessService;
+            commonBusinessService = new CommonApplicationService(commondataservice);
+            userApiModel userapimodel = new userApiModel();
+
+            var result = commonBusinessService.GetCity(id, out transaction);
+            if (transaction.ReturnStatus == false)
+            {
+                userapimodel.ReturnMessage = transaction.ReturnMessage;
+                userapimodel.ReturnStatus = transaction.ReturnStatus;
+                var badResponse = Request.CreateResponse<userApiModel>(HttpStatusCode.BadRequest, userapimodel);
+                return badResponse;
+
+            }
+            userapimodel.ReturnStatus = transaction.ReturnStatus;
+            userapimodel.IsAuthenicated = true;
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
-
-        [HttpGet]
-        public HttpResponseMessage GetCountry()
-        {
-            var result = db.countries.Select(x => new { x.name, x.countryid }).ToList();
-            return Request.CreateResponse(HttpStatusCode.OK, result);
-        }
-
-        [HttpGet]
-        public HttpResponseMessage GetState(int id)
-        {
-            var result = db.states.Where(a => a.countryid == id).Select(x => new { x.name, x.stateid }).OrderBy(o => o.name).ToList();
-            return Request.CreateResponse(HttpStatusCode.OK, result);
-        }*/
     }
 }

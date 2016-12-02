@@ -47,8 +47,6 @@ D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\CareerRoadiesApi.dll
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\CareerRoadiesApi.pdb
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\ApplicationService.dll
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\DataModels.dll
-D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\DataService.dll
-D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\DataserviceInterface.dll
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\EntityFramework.dll
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\EntityFramework.SqlServer.dll
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\Microsoft.Practices.ServiceLocation.dll
@@ -86,3 +84,5 @@ D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\LogManager.pdb
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\obj\Debug\CareerRoadiesApi.csprojResolveAssemblyReference.cache
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\obj\Debug\CareerRoadiesApi.dll
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\obj\Debug\CareerRoadiesApi.pdb
+D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\DataService.dll
+D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\DataserviceInterface.dll

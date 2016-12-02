@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DataserviceInterface;
 using DataAccessLayer;
 using System.Data;
+using DataModels;
 
 
 
@@ -36,6 +37,43 @@ namespace DataService
              arrParam[1, 1] = profileid.ToString();
              var result = obj.ExecuteDataTable(strQuery, arrParam);
              return result;
-         }  
+         }
+
+         public List<State> GetState()
+         {
+             List<State> lststates = new List<State>();
+             State s = new State();
+             SqlDataAccess obj = new SqlDataAccess();
+             string strQuery = "getstate";
+             var result = obj.ExecuteDataTable(strQuery);
+
+             lststates = (from DataRow row in result.Rows
+
+                    select new State
+                    {
+                        stateid = Convert.ToInt16(row["stateid"].ToString()),
+                        name = row["name"].ToString()
+
+                    }).ToList();
+             return lststates;
+         }
+
+         public City GetCity(int stateid)
+         {
+             City c = new City();
+             SqlDataAccess obj = new SqlDataAccess();
+             var arrParam = new string[1, 2];
+             arrParam[0, 0] = "_stateid";
+             arrParam[0, 1] = stateid.ToString();
+             string strQuery = "GetCity";
+             var result = obj.ExecuteDataTable(strQuery, arrParam);
+             if (result.Rows.Count > 0)
+             {
+                 c.cityid = Convert.ToInt16(result.Rows[0]["cityid"].ToString());
+                 c.stateid = Convert.ToInt16(result.Rows[0]["stateid"].ToString());
+                 c.name = result.Rows[0]["name"].ToString();
+             }
+             return c;
+         }
     }
 }

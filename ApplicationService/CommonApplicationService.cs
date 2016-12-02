@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataserviceInterface;
 using System.Data;
+using DataModels;
 
 
 namespace ApplicationService
@@ -33,6 +34,42 @@ namespace ApplicationService
         {
             var friendsList = commondataservice.GetProfileList(userid, profileid);
             return friendsList;
+        }
+
+        public List<State> GetState(out TransactionalInformation transaction)
+        {
+            var states = new List<State>();
+            transaction = new TransactionalInformation();
+            try
+            {
+                states = commondataservice.GetState();
+            }
+            catch (Exception ex)
+            {
+                string errorMessage = ex.Message;
+                transaction.ReturnMessage.Add(errorMessage);
+            }
+
+            return states;
+        }
+
+        public City GetCity(int stateid, out TransactionalInformation transaction)
+        {
+            City cities = new City();
+            transaction = new TransactionalInformation();
+            try
+            {
+                transaction.ReturnStatus = true;
+                cities = commondataservice.GetCity(stateid);
+            }
+            catch (Exception ex)
+            {
+                string errorMessage = ex.Message;
+                transaction.ReturnStatus = false;
+                transaction.ReturnMessage.Add(errorMessage);
+            }
+
+            return cities;
         }
     }
 }

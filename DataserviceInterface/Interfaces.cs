@@ -12,6 +12,8 @@ namespace DataserviceInterface
     {
         DataTable GetMenu(int profileid);
         object GetProfileList(int profileid, int userid);
+        City GetCity(int stateid);
+        List<State> GetState();
     }
 
     public interface IProfileService
