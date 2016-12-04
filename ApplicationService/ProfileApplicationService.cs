@@ -10,7 +10,7 @@ namespace ApplicationService
 {
     public class ProfileApplicationService
     {
-        // Profile Class for saving profile details.
+        // Profile Class for saving profile details. - added by pankaj 
         IProfileService _profileservice;
         private IProfileService profileservice
         {
