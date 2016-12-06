@@ -35,7 +35,7 @@ namespace DataService
         {
             string profile_id = string.Empty;
             string strQuery = "saveprofiledetails";
-            var arrParam = new string[14, 2];
+            var arrParam = new string[17, 2];
             arrParam[0, 0] = "_profileid";
             arrParam[0, 1] = userprofile.ProfileId;
 
@@ -78,12 +78,26 @@ namespace DataService
             arrParam[13, 0] = "_stype";
             arrParam[13, 1] = userprofile.stype.ToString();
 
-            var result = obj.ExecuteDataTable(strQuery, arrParam);
-            if (result.Rows.Count>0)
-            {
-                if (!string.IsNullOrEmpty(result.Rows[0]["uuid"].ToString()))
-                    profile_id = result.Rows[0]["uuid"].ToString();
+            arrParam[15, 0] = "_location";
+            arrParam[15, 1] = userprofile.location.ToString();
 
+            arrParam[14, 0] = "_city";
+            arrParam[14, 1] = userprofile.city.ToString();
+
+            arrParam[16, 0] = "_state";
+            arrParam[16, 1] = userprofile.state.ToString();
+
+            
+
+            var result = obj.ExecuteDataTable(strQuery, arrParam);
+            if (result != null)
+            {
+                if (result.Rows.Count > 0)
+                {
+                    if (!string.IsNullOrEmpty(result.Rows[0]["uuid"].ToString()))
+                        profile_id = result.Rows[0]["uuid"].ToString();
+
+                }
             }
             return profile_id;
         }

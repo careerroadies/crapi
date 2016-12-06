@@ -58,22 +58,28 @@ namespace DataService
              return lststates;
          }
 
-         public City GetCity(int stateid)
+         public List<City> GetCity(int stateid)
          {
-             City c = new City();
+             List<City> lstcities = new List<City>();
+             City s = new City();
              SqlDataAccess obj = new SqlDataAccess();
              var arrParam = new string[1, 2];
              arrParam[0, 0] = "_stateid";
              arrParam[0, 1] = stateid.ToString();
              string strQuery = "GetCity";
+
              var result = obj.ExecuteDataTable(strQuery, arrParam);
-             if (result.Rows.Count > 0)
-             {
-                 c.cityid = Convert.ToInt16(result.Rows[0]["cityid"].ToString());
-                 c.stateid = Convert.ToInt16(result.Rows[0]["stateid"].ToString());
-                 c.name = result.Rows[0]["name"].ToString();
-             }
-             return c;
+
+             lstcities = (from DataRow row in result.Rows
+
+                          select new City
+                          {
+                              stateid = Convert.ToInt16(row["stateid"].ToString()),
+                              name = row["name"].ToString(),
+                              cityid = Convert.ToInt16(row["cityid"].ToString()),
+
+                          }).ToList();
+             return lstcities;
          }
     }
 }

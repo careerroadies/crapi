@@ -84,5 +84,3 @@ D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\LogManager.pdb
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\obj\Debug\CareerRoadiesApi.csprojResolveAssemblyReference.cache
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\obj\Debug\CareerRoadiesApi.dll
 D:\crapi\CareerRoadiesApi\CareerRoadiesApi\obj\Debug\CareerRoadiesApi.pdb
-D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\DataService.dll
-D:\crapi\CareerRoadiesApi\CareerRoadiesApi\bin\DataserviceInterface.dll

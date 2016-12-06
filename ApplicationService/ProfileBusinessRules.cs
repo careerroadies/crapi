@@ -25,6 +25,9 @@ namespace ApplicationService
             ValidateRequired("FirstName", "First Name");
             ValidateRequired("LastName", "Last Name");
             ValidateRequired("Gender", "Gender");
+            ValidateRequired("state", "State");
+            ValidateRequired("city", "City");
+            ValidateRequired("location", "Location");
             ValidateEmailAddress("PrimaryEmail", "Primary Email");
             ValidateEmailAddress("AlternateEmail", "Alternate Email");
         }

@@ -39,6 +39,10 @@ namespace CareerRoadiesApi.Controllers
             bpd.ProfileText = p.ProfileText;
             bpd.MaritalStatus = p.MaritalStatus;
             bpd.stype = p.stype;
+            bpd.city = p.city;
+            bpd.state = p.state;
+            bpd.location = p.location;
+
             
             var result = pas.saveprofile(bpd, out transaction);
             if (transaction.ReturnStatus == false)

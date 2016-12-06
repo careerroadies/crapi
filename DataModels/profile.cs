@@ -27,7 +27,10 @@ namespace DataModels
        public string ProfilePicture { get; set; }
        public string ProfileText { get; set; }
        public string Status { get; set; }
-       public string stype { get; set; }   
+       public string stype { get; set; }
+       public string city { get; set; }
+       public string state { get; set; }
+       public string location { get; set; }
     }
 
     public class profileAddressDetails

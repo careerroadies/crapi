@@ -53,9 +53,9 @@ namespace ApplicationService
             return states;
         }
 
-        public City GetCity(int stateid, out TransactionalInformation transaction)
+        public List<City> GetCity(int stateid, out TransactionalInformation transaction)
         {
-            City cities = new City();
+            var cities = new List<City>();
             transaction = new TransactionalInformation();
             try
             {
