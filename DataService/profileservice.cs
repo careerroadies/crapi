@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DataserviceInterface;
 using DataModels;
 using DataAccessLayer;
+using System.Data;
 namespace DataService
 {
   public class profileservice:IProfileService
@@ -17,9 +18,17 @@ namespace DataService
             return null;
         }
 
-        public BasicProfileDetails GetProfile(int profileid)
+        public DataTable GetProfile(string profileid)
         {
-            return null;
+            string strQuery = "getprofiledetails";
+            var arrParam = new string[1, 1];
+            arrParam[0, 0] = "_profileid";
+            arrParam[0, 1] = profileid;
+            var result = obj.ExecuteDataTable(strQuery, arrParam);
+            if (result.Rows.Count > 0)
+                return result;
+            else
+                return null;
         }
 
         public string SaveProfile(BasicProfileDetails userprofile)
@@ -92,5 +101,6 @@ namespace DataService
             }
             return profile_id;
         }
+
     }
 }

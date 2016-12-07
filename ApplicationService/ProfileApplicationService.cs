@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataserviceInterface;
 using DataModels;
+using System.Data;
 
 namespace ApplicationService
 {
@@ -42,7 +43,7 @@ namespace ApplicationService
                     transaction.ReturnMessage = profilebusinessrules.ValidationMessage;
                     transaction.ValidationErrors = profilebusinessrules.ValidationErrors;
                 }
-                
+
 
             }
             catch (Exception ex)
@@ -52,9 +53,14 @@ namespace ApplicationService
                 transaction.ReturnStatus = false;
                 transaction.ReturnMessage.Add(errorMessage);
             }
-        
-            
+
+
             return savestatus;
+        }
+        public DataTable GetProfile(string profileid)
+        {
+            DataTable DtProfile = profileservice.GetProfile(profileid);
+            return DtProfile;
         }
     }
 }

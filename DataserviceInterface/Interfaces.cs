@@ -20,8 +20,8 @@ namespace DataserviceInterface
     public interface IProfileService
     {
         List<BasicProfileDetails> GetProfiles();
-        BasicProfileDetails GetProfile(int profileid);
         string SaveProfile(BasicProfileDetails userprofile);
+        DataTable GetProfile(string Profileid);
     }
 
     public interface IuserService
