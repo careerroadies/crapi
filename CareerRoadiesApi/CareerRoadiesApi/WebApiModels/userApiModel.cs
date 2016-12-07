@@ -33,6 +33,13 @@ namespace CareerRoadiesApi.WebApiModels
         public string usertypeid { get; set; }
     }
 
+    public class LocationSearchDTO
+    {
+        public string location { get; set; }
+        public int city { get; set; }
+        public int state { get; set; }
+    }
+
     public class BasicProfileDetailsDTO
     {
         public string ProfileId { get; set; }

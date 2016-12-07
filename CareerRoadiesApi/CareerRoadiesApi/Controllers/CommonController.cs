@@ -101,5 +101,33 @@ namespace CareerRoadiesApi.Controllers
             userapimodel.IsAuthenicated = true;
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
+
+        [HttpPost]
+        public HttpResponseMessage GetProfileByLocation(LocationSearchDTO locationsearchDTO)
+        {
+            TransactionalInformation transaction = new TransactionalInformation();
+            CommonApplicationService commonBusinessService;
+            commonBusinessService = new CommonApplicationService(commondataservice);
+            userApiModel userapimodel = new userApiModel();
+            string location = string.Empty;
+            int city = 1;
+            int state = 1;
+            location = locationsearchDTO.location;
+            city = locationsearchDTO.city;
+            state = locationsearchDTO.state;
+
+            var result = commonBusinessService.GetuserByLocations(location, city, state, out transaction);
+            if (transaction.ReturnStatus == false)
+            {
+                userapimodel.ReturnMessage = transaction.ReturnMessage;
+                userapimodel.ReturnStatus = transaction.ReturnStatus;
+                var badResponse = Request.CreateResponse<userApiModel>(HttpStatusCode.BadRequest, userapimodel);
+                return badResponse;
+
+            }
+            userapimodel.ReturnStatus = transaction.ReturnStatus;
+            userapimodel.IsAuthenicated = true;
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
     }
 }

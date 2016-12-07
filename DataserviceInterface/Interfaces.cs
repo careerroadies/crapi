@@ -12,6 +12,7 @@ namespace DataserviceInterface
     {
         DataTable GetMenu(int profileid);
         object GetProfileList(int profileid, int userid);
+        List<searchuser> GetProfileByLocation(string location, int city, int state);
         List<City> GetCity(int stateid);
         List<State> GetState();
     }

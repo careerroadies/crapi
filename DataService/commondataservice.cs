@@ -81,5 +81,39 @@ namespace DataService
                           }).ToList();
              return lstcities;
          }
+
+         public List<searchuser> GetProfileByLocation(string location, int city, int state)
+         {
+             List<searchuser> lstusers = new List<searchuser>();
+             searchuser s = new searchuser();
+             SqlDataAccess obj = new SqlDataAccess();
+             var arrParam = new string[3, 2];
+             arrParam[0, 0] = "_location";
+             arrParam[0, 1] = location.ToString();
+
+             arrParam[1, 0] = "_city";
+             arrParam[1, 1] = city.ToString();
+
+             arrParam[2, 0] = "_state";
+             arrParam[2, 1] = state.ToString();
+
+             string strQuery = "GetSearchByLocation";
+
+             var result = obj.ExecuteDataTable(strQuery, arrParam);
+
+             lstusers = (from DataRow row in result.Rows
+
+                          select new searchuser
+                          {
+                              profileid = row["profileid"].ToString(),
+                              username = row["username"].ToString(),
+                              dob = row["DOB"].ToString(),
+                              mobilenumber = row["mobilenumber"].ToString(),
+                              profilepicture = row["profilepicture"].ToString(),
+                              primaryemail = row["primaryemail"].ToString(),
+
+                          }).ToList();
+             return lstusers;
+         }
     }
 }

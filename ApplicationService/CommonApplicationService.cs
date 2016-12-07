@@ -36,6 +36,7 @@ namespace ApplicationService
             return friendsList;
         }
 
+
         public List<State> GetState(out TransactionalInformation transaction)
         {
             var states = new List<State>();
@@ -52,6 +53,24 @@ namespace ApplicationService
 
             return states;
         }
+
+        public List<searchuser> GetuserByLocations(string location, int city, int state, out TransactionalInformation transaction)
+        {
+            var states = new List<searchuser>();
+            transaction = new TransactionalInformation();
+            try
+            {
+                states = commondataservice.GetProfileByLocation(location, city, state);
+            }
+            catch (Exception ex)
+            {
+                string errorMessage = ex.Message;
+                transaction.ReturnMessage.Add(errorMessage);
+            }
+
+            return states;
+        }
+
 
         public List<City> GetCity(int stateid, out TransactionalInformation transaction)
         {

@@ -46,4 +46,14 @@ namespace DataModels
         public int StateID { get; set; }
         public int AddressCategoryID { get; set; }
     }
+
+    public class searchuser
+    {
+        public string profileid { get; set; }
+        public string username { get; set; }
+        public string dob   { get; set; }
+        public string mobilenumber { get; set; }
+        public string profilepicture { get; set; }
+        public string primaryemail { get; set; }
+    }
 }
