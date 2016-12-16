@@ -23,4 +23,10 @@ namespace DataModels
         public int stateid { get; set; }
         public string name { get; set; }
     }
+
+    public class alerts
+    {
+        public string alerttext { get; set; }
+        public string added { get; set; }
+    }
 }

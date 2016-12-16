@@ -13,107 +13,139 @@ using DataModels;
 namespace DataService
 {
     public class commondataservice : Icommonservice
-     {
-         public DataTable GetMenu(int profileid)
-         {
-             SqlDataAccess obj = new SqlDataAccess();
-             string strQuery = "Getmenu";
-             var arrParam = new string[1, 2];
-             arrParam[0, 0] = "p_profiletype";
-             arrParam[0, 1] = profileid.ToString();
-             var result = obj.ExecuteDataTable(strQuery, arrParam);
-             return result;
-         }
+    {
+        public DataTable GetMenu(int profileid)
+        {
+            SqlDataAccess obj = new SqlDataAccess();
+            string strQuery = "Getmenu";
+            var arrParam = new string[1, 2];
+            arrParam[0, 0] = "p_profiletype";
+            arrParam[0, 1] = profileid.ToString();
+            var result = obj.ExecuteDataTable(strQuery, arrParam);
+            return result;
+        }
 
-         public object GetProfileList(int userid, int profileid)
-         {
-             SqlDataAccess obj = new SqlDataAccess();
-             string strQuery = "GetProfileList";
-             var arrParam = new string[2, 2];
-             arrParam[0, 0] = "p_userid";
-             arrParam[0, 1] = userid.ToString();
+        public object GetProfileList(int userid, int profileid)
+        {
+            SqlDataAccess obj = new SqlDataAccess();
+            string strQuery = "GetProfileList";
+            var arrParam = new string[2, 2];
+            arrParam[0, 0] = "p_userid";
+            arrParam[0, 1] = userid.ToString();
 
-             arrParam[1, 0] = "p_profileid";
-             arrParam[1, 1] = profileid.ToString();
-             var result = obj.ExecuteDataTable(strQuery, arrParam);
-             return result;
-         }
+            arrParam[1, 0] = "p_profileid";
+            arrParam[1, 1] = profileid.ToString();
+            var result = obj.ExecuteDataTable(strQuery, arrParam);
+            return result;
+        }
 
-         public List<State> GetState()
-         {
-             List<State> lststates = new List<State>();
-             State s = new State();
-             SqlDataAccess obj = new SqlDataAccess();
-             string strQuery = "getstate";
-             var result = obj.ExecuteDataTable(strQuery);
+        public List<State> GetState()
+        {
+            List<State> lststates = new List<State>();
+            State s = new State();
+            SqlDataAccess obj = new SqlDataAccess();
+            string strQuery = "getstate";
+            var result = obj.ExecuteDataTable(strQuery);
 
-             lststates = (from DataRow row in result.Rows
+            lststates = (from DataRow row in result.Rows
 
-                    select new State
-                    {
-                        stateid = Convert.ToInt16(row["stateid"].ToString()),
-                        name = row["name"].ToString()
+                         select new State
+                         {
+                             stateid = Convert.ToInt16(row["stateid"].ToString()),
+                             name = row["name"].ToString()
 
-                    }).ToList();
-             return lststates;
-         }
+                         }).ToList();
+            return lststates;
+        }
 
-         public List<City> GetCity(int stateid)
-         {
-             List<City> lstcities = new List<City>();
-             City s = new City();
-             SqlDataAccess obj = new SqlDataAccess();
-             var arrParam = new string[1, 2];
-             arrParam[0, 0] = "_stateid";
-             arrParam[0, 1] = stateid.ToString();
-             string strQuery = "GetCity";
+        public List<City> GetCity(int stateid)
+        {
+            List<City> lstcities = new List<City>();
+            City s = new City();
+            SqlDataAccess obj = new SqlDataAccess();
+            var arrParam = new string[1, 2];
+            arrParam[0, 0] = "_stateid";
+            arrParam[0, 1] = stateid.ToString();
+            string strQuery = "GetCity";
 
-             var result = obj.ExecuteDataTable(strQuery, arrParam);
+            var result = obj.ExecuteDataTable(strQuery, arrParam);
 
-             lstcities = (from DataRow row in result.Rows
+            lstcities = (from DataRow row in result.Rows
 
-                          select new City
-                          {
-                              stateid = Convert.ToInt16(row["stateid"].ToString()),
-                              name = row["name"].ToString(),
-                              cityid = Convert.ToInt16(row["cityid"].ToString()),
+                         select new City
+                         {
+                             stateid = Convert.ToInt16(row["stateid"].ToString()),
+                             name = row["name"].ToString(),
+                             cityid = Convert.ToInt16(row["cityid"].ToString()),
 
-                          }).ToList();
-             return lstcities;
-         }
+                         }).ToList();
+            return lstcities;
+        }
 
-         public List<searchuser> GetProfileByLocation(string location, int city, int state)
-         {
-             List<searchuser> lstusers = new List<searchuser>();
-             searchuser s = new searchuser();
-             SqlDataAccess obj = new SqlDataAccess();
-             var arrParam = new string[3, 2];
-             arrParam[0, 0] = "_location";
-             arrParam[0, 1] = location.ToString();
+        public List<searchuser> GetProfileByLocation(string location, int city, int state)
+        {
+            List<searchuser> lstusers = new List<searchuser>();
+            searchuser s = new searchuser();
+            SqlDataAccess obj = new SqlDataAccess();
+            var arrParam = new string[3, 2];
+            arrParam[0, 0] = "_location";
+            arrParam[0, 1] = location.ToString();
 
-             arrParam[1, 0] = "_city";
-             arrParam[1, 1] = city.ToString();
+            arrParam[1, 0] = "_city";
+            arrParam[1, 1] = city.ToString();
 
-             arrParam[2, 0] = "_state";
-             arrParam[2, 1] = state.ToString();
+            arrParam[2, 0] = "_state";
+            arrParam[2, 1] = state.ToString();
 
-             string strQuery = "GetSearchByLocation";
+            string strQuery = "GetSearchByLocation";
 
-             var result = obj.ExecuteDataTable(strQuery, arrParam);
+            var result = obj.ExecuteDataTable(strQuery, arrParam);
 
-             lstusers = (from DataRow row in result.Rows
+            lstusers = (from DataRow row in result.Rows
 
-                          select new searchuser
-                          {
-                              profileid = row["profileid"].ToString(),
-                              username = row["username"].ToString(),
-                              dob = row["DOB"].ToString(),
-                              mobilenumber = row["mobilenumber"].ToString(),
-                              profilepicture = row["profilepicture"].ToString(),
-                              primaryemail = row["primaryemail"].ToString(),
+                        select new searchuser
+                        {
+                            profileid = row["profileid"].ToString(),
+                            username = row["username"].ToString(),
+                            dob = row["DOB"].ToString(),
+                            mobilenumber = row["mobilenumber"].ToString(),
+                            profilepicture = row["profilepicture"].ToString(),
+                            primaryemail = row["primaryemail"].ToString(),
 
-                          }).ToList();
-             return lstusers;
-         }
+                        }).ToList();
+            return lstusers;
+        }
+
+        public bool SaveAlerts(string alerttext, string alerttypeid, string added, string alertzoneid,
+                   string userid, string expiredate, string alertdescription)
+        {
+            SqlDataAccess obj = new SqlDataAccess();
+            string strQuery = "savealerts";
+            var arrParam = new string[7, 2];
+            arrParam[0, 0] = "_alerttext";
+            arrParam[0, 1] = alerttext.ToString();
+
+            arrParam[1, 0] = "_alerttypeid";
+            arrParam[1, 1] = alerttypeid.ToString();
+
+            arrParam[2, 0] = "_added";
+            arrParam[2, 1] = added.ToString();
+
+            arrParam[3, 0] = "_alertzoneid";
+            arrParam[3, 1] = alertzoneid.ToString();
+
+            arrParam[4, 0] = "_userid";
+            arrParam[4, 1] = userid.ToString();
+
+            arrParam[5, 0] = "_expiredate";
+            arrParam[5, 1] = expiredate.ToString();
+
+            arrParam[6, 0] = "_alertdescription";
+            arrParam[6, 1] = alertdescription.ToString();
+
+            var result = obj.ExecuteNonQuery(strQuery, arrParam);
+
+            return (result > 0) ? true : false;
+        }
     }
 }

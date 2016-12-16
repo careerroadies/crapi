@@ -15,6 +15,9 @@ namespace DataserviceInterface
         List<searchuser> GetProfileByLocation(string location, int city, int state);
         List<City> GetCity(int stateid);
         List<State> GetState();
+      //  List<alerts> GetAlerts();
+        bool SaveAlerts(string alerttext, string alerttypeid, string added, string alertzoneid,
+                    string userid, string expiredate, string alertdescription);
     }
 
     public interface IProfileService

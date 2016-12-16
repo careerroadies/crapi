@@ -60,4 +60,16 @@ namespace CareerRoadiesApi.WebApiModels
         public string state { get; set; }
         public string location { get; set; }
     }
+
+    public class AlertsDTO
+    {
+        public string alerttext { get; set; }
+        public string alerttypeid { get; set; }
+        public string added { get; set; }
+        public string alertzoneid { get; set; }
+        public string userid { get; set; }
+        public string expiredate { get; set; }
+        public string alertdescription { get; set; }
+        public string AlternateEmail { get; set; }
+    }
 }
