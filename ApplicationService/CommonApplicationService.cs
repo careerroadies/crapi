@@ -91,23 +91,5 @@ namespace ApplicationService
             return cities;
         }
 
-        public bool SaveAlerts(string alerttext, string alerttypeid, string added, string alertzoneid,
-                     string userid, string expiredate, string alertdescription, out TransactionalInformation transaction)
-        {
-            var issaveAlert = false;
-            transaction = new TransactionalInformation();
-            try
-            {
-                transaction.ReturnStatus = true;
-                issaveAlert = commondataservice.SaveAlerts(alerttext, alerttypeid, added, alertzoneid, userid, expiredate, alertdescription);
-            }
-            catch (Exception ex)
-            {
-                string errorMessage = ex.Message;
-                transaction.ReturnStatus = false;
-                transaction.ReturnMessage.Add(errorMessage);
-            }
-            return issaveAlert;
-        }
     }
 }

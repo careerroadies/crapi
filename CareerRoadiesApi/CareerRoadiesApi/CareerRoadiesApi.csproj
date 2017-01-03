@@ -129,10 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AlertController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\FileUploadController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\PostAdsController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">

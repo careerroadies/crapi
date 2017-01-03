@@ -56,7 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertsApplicationService.cs" />
     <Compile Include="CommonApplicationService.cs" />
+    <Compile Include="PostAdsApplicationService.cs" />
     <Compile Include="ProfileApplicationService.cs" />
     <Compile Include="ProfileBusinessRules.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
