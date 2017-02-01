@@ -15,6 +15,7 @@ namespace DataserviceInterface
         List<searchuser> GetProfileByLocation(string location, int city, int state);
         List<City> GetCity(int stateid);
         List<State> GetState();
+        List<pincode> GetPinCode(string cityid);
       //  List<alerts> GetAlerts();
        
     }

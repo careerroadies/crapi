@@ -102,6 +102,29 @@ namespace CareerRoadiesApi.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        [HttpGet]
+        public HttpResponseMessage GetPinCode(string id)
+        {
+            TransactionalInformation transaction = new TransactionalInformation();
+            CommonApplicationService commonBusinessService;
+            commonBusinessService = new CommonApplicationService(commondataservice);
+            userApiModel userapimodel = new userApiModel();
+
+            var result = commonBusinessService.GetPinCode(id, out transaction);
+            if (transaction.ReturnStatus == false)
+            {
+                userapimodel.ReturnMessage = transaction.ReturnMessage;
+                userapimodel.ReturnStatus = transaction.ReturnStatus;
+                var badResponse = Request.CreateResponse<userApiModel>(HttpStatusCode.BadRequest, userapimodel);
+                return badResponse;
+
+            }
+            userapimodel.ReturnStatus = transaction.ReturnStatus;
+            userapimodel.IsAuthenicated = true;
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
+
         [HttpPost]
         public HttpResponseMessage GetProfileByLocation(LocationSearchDTO locationsearchDTO)
         {

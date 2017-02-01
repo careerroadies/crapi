@@ -10,7 +10,7 @@ using DataModels;
 
 namespace ApplicationService
 {
-    public class CommonApplicationService 
+    public class CommonApplicationService
     {
         Icommonservice _commondataservice;
         private Icommonservice commondataservice
@@ -29,7 +29,7 @@ namespace ApplicationService
             return menulist;
         }
 
-        
+
         public object getProfileList(int userid, int profileid)
         {
             var friendsList = commondataservice.GetProfileList(userid, profileid);
@@ -89,6 +89,26 @@ namespace ApplicationService
             }
 
             return cities;
+        }
+
+
+        public List<pincode> GetPinCode(string cityid, out TransactionalInformation transaction)
+        {
+            var pincodes = new List<pincode>();
+            transaction = new TransactionalInformation();
+            try
+            {
+                transaction.ReturnStatus = true;
+                pincodes = commondataservice.GetPinCode(cityid);
+            }
+            catch (Exception ex)
+            {
+                string errorMessage = ex.Message;
+                transaction.ReturnStatus = false;
+                transaction.ReturnMessage.Add(errorMessage);
+            }
+
+            return pincodes;
         }
 
     }

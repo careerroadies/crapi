@@ -24,6 +24,12 @@ namespace DataModels
         public string name { get; set; }
     }
 
+    public class pincode
+    {
+        public string pincodeid { get; set; }
+        public string location { get; set; }
+    }
+
     public class alerts
     {
         public string alerttext { get; set; }

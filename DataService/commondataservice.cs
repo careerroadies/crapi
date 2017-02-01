@@ -82,6 +82,30 @@ namespace DataService
             return lstcities;
         }
 
+        public List<pincode> GetPinCode(string cityid)
+        {
+            List<pincode> lstpincode = new List<pincode>();
+            City s = new City();
+            SqlDataAccess obj = new SqlDataAccess();
+            var arrParam = new string[1, 2];
+            arrParam[0, 0] = "_cityid";
+            arrParam[0, 1] = cityid.ToString();
+            string strQuery = "GetPincodes";
+
+            var result = obj.ExecuteDataTable(strQuery, arrParam);
+
+            lstpincode = (from DataRow row in result.Rows
+
+                         select new pincode
+                         {
+                             pincodeid = row["pincode"].ToString(),
+                             location = row["location"].ToString(),
+                             
+
+                         }).ToList();
+            return lstpincode;
+        }
+
         public List<searchuser> GetProfileByLocation(string location, int city, int state)
         {
             List<searchuser> lstusers = new List<searchuser>();
