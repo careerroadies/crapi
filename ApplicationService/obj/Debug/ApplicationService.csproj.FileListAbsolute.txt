@@ -38,3 +38,15 @@ D:\CareerRoadiesApi\ApplicationService\obj\Debug\ApplicationService.pdb
 D:\CareerRoadiesApi\ApplicationService\bin\Debug\DataserviceInterface.dll
 D:\CareerRoadiesApi\ApplicationService\bin\Debug\Utilities.dll
 D:\CareerRoadiesApi\ApplicationService\bin\Debug\Utilities.pdb
+F:\Test\crapi\ApplicationService\bin\Debug\ApplicationService.dll.config
+F:\Test\crapi\ApplicationService\bin\Debug\ApplicationService.dll
+F:\Test\crapi\ApplicationService\bin\Debug\ApplicationService.pdb
+F:\Test\crapi\ApplicationService\bin\Debug\DataModels.dll
+F:\Test\crapi\ApplicationService\bin\Debug\DataserviceInterface.dll
+F:\Test\crapi\ApplicationService\bin\Debug\Utilities.dll
+F:\Test\crapi\ApplicationService\bin\Debug\DataModels.pdb
+F:\Test\crapi\ApplicationService\bin\Debug\DataserviceInterface.pdb
+F:\Test\crapi\ApplicationService\bin\Debug\Utilities.pdb
+F:\Test\crapi\ApplicationService\obj\Debug\ApplicationService.csprojResolveAssemblyReference.cache
+F:\Test\crapi\ApplicationService\obj\Debug\ApplicationService.dll
+F:\Test\crapi\ApplicationService\obj\Debug\ApplicationService.pdb

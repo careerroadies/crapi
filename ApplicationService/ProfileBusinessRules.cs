@@ -31,6 +31,57 @@ namespace ApplicationService
             ValidateEmailAddress("PrimaryEmail", "Primary Email");
             ValidateEmailAddress("AlternateEmail", "Alternate Email");
         }
-
+        public void ValidatePostGraduationDetails(profilepostgraduation profile, IProfileService profileservice)
+        {
+            profiledataservice = profileservice;
+            InitializeValidationRules(profile);
+            ValidateRequired("FirstName", "First Name");
+            ValidateRequired("LastName", "Last Name");
+            ValidateRequired("Gender", "Gender");
+            ValidateRequired("state", "State");
+            ValidateRequired("city", "City");
+            ValidateRequired("location", "Location");
+            ValidateEmailAddress("PrimaryEmail", "Primary Email");
+            ValidateEmailAddress("AlternateEmail", "Alternate Email");
+        }
+        public void ValidateGraduationDetails(profilegraduationdetails profile, IProfileService profileservice)
+        {
+            profiledataservice = profileservice;
+            InitializeValidationRules(profile);
+            ValidateRequired("FirstName", "First Name");
+            ValidateRequired("LastName", "Last Name");
+            ValidateRequired("Gender", "Gender");
+            ValidateRequired("state", "State");
+            ValidateRequired("city", "City");
+            ValidateRequired("location", "Location");
+            ValidateEmailAddress("PrimaryEmail", "Primary Email");
+            ValidateEmailAddress("AlternateEmail", "Alternate Email");
+        }
+        public void ValidateHigherSecondaryDetails(profilehighersecondarydetails profile, IProfileService profileservice)
+        {
+            profiledataservice = profileservice;
+            InitializeValidationRules(profile);
+            ValidateRequired("FirstName", "First Name");
+            ValidateRequired("LastName", "Last Name");
+            ValidateRequired("Gender", "Gender");
+            ValidateRequired("state", "State");
+            ValidateRequired("city", "City");
+            ValidateRequired("location", "Location");
+            ValidateEmailAddress("PrimaryEmail", "Primary Email");
+            ValidateEmailAddress("AlternateEmail", "Alternate Email");
+        }
+        public void ValidateSecondaryDetails(profilesecondarydetails profile, IProfileService profileservice)
+        {
+            profiledataservice = profileservice;
+            InitializeValidationRules(profile);
+            ValidateRequired("FirstName", "First Name");
+            ValidateRequired("LastName", "Last Name");
+            ValidateRequired("Gender", "Gender");
+            ValidateRequired("state", "State");
+            ValidateRequired("city", "City");
+            ValidateRequired("location", "Location");
+            ValidateEmailAddress("PrimaryEmail", "Primary Email");
+            ValidateEmailAddress("AlternateEmail", "Alternate Email");
+        }
     }
 }

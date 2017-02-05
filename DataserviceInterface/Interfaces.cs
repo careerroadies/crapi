@@ -22,9 +22,22 @@ namespace DataserviceInterface
 
     public interface IProfileService
     {
-        List<BasicProfileDetails> GetProfiles();
-        string SaveProfile(BasicProfileDetails userprofile);
         DataTable GetProfile(string Profileid);
+        string SaveProfile(BasicProfileDetails userprofile);
+
+        List<BasicProfileDetails> GetProfiles();
+
+        DataTable GetPostGraduationDetails(string Profileid);
+        string SavePostGraduationDetails(profilepostgraduation postgraduation);
+
+        DataTable GetGraduationDetails(string Profileid);
+        string SaveGraduationDetails(profilegraduationdetails graduation);
+
+        DataTable GetHigherSecondaryDetails(string Profileid);
+        string SaveHigherSecondaryDetails(profilehighersecondarydetails highersecondary);
+
+        DataTable GetSecondaryDetails(string Profileid);
+        string SaveSecondaryDetails(profilesecondarydetails secondary);
     }
 
     public interface IuserService
@@ -44,4 +57,5 @@ namespace DataserviceInterface
     {
         bool SaveAds(postads postads);
     }
+
 }
