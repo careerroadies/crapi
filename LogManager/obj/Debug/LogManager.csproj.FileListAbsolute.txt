@@ -57,3 +57,8 @@ D:\CareerRoadiesApi\LogManager\bin\Debug\LogManager.dll
 D:\CareerRoadiesApi\LogManager\bin\Debug\LogManager.pdb
 D:\CareerRoadiesApi\LogManager\obj\Debug\LogManager.dll
 D:\CareerRoadiesApi\LogManager\obj\Debug\LogManager.pdb
+F:\Test\crapi\LogManager\bin\Debug\LogManager.dll
+F:\Test\crapi\LogManager\bin\Debug\LogManager.pdb
+F:\Test\crapi\LogManager\obj\Debug\LogManager.csprojResolveAssemblyReference.cache
+F:\Test\crapi\LogManager\obj\Debug\LogManager.dll
+F:\Test\crapi\LogManager\obj\Debug\LogManager.pdb

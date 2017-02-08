@@ -91,3 +91,10 @@ D:\CareerRoadiesApi\DataAccessLayer\bin\Debug\LogManager.pdb
 D:\CareerRoadiesApi\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 D:\CareerRoadiesApi\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\CareerRoadiesApi\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+F:\Test\crapi\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+F:\Test\crapi\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+F:\Test\crapi\DataAccessLayer\bin\Debug\LogManager.dll
+F:\Test\crapi\DataAccessLayer\bin\Debug\LogManager.pdb
+F:\Test\crapi\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+F:\Test\crapi\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+F:\Test\crapi\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

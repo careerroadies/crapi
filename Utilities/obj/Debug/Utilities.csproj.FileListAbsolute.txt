@@ -4,3 +4,9 @@ D:\CareerRoadiesApi\Utilities\bin\Debug\Utilities.pdb
 D:\CareerRoadiesApi\Utilities\obj\Debug\Utilities.dll
 D:\CareerRoadiesApi\Utilities\obj\Debug\Utilities.pdb
 D:\CareerRoadiesApi\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+F:\Test\crapi\Utilities\bin\Debug\Utilities.dll.config
+F:\Test\crapi\Utilities\bin\Debug\Utilities.dll
+F:\Test\crapi\Utilities\bin\Debug\Utilities.pdb
+F:\Test\crapi\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+F:\Test\crapi\Utilities\obj\Debug\Utilities.dll
+F:\Test\crapi\Utilities\obj\Debug\Utilities.pdb
