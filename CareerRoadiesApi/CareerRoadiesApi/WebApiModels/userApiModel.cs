@@ -29,7 +29,7 @@ namespace CareerRoadiesApi.WebApiModels
     public class LoginDTO
     {
         public string username { get; set; }
-        public string password { get;set;}
+        public string password { get; set; }
         public string usertypeid { get; set; }
     }
 
@@ -75,19 +75,61 @@ namespace CareerRoadiesApi.WebApiModels
 
     public class AdsDTO
     {
-            public string adsid { get; set; }
-            public string adcategoryid { get; set; }
-            public string adtitle { get; set; }
-            public string addescription { get; set; }
-            public string state { get; set; }
-            public string city { get; set; }
-            public string location { get; set; }
-            public string name { get; set; }
-            public string email { get; set; }
-            public string mobilenumber { get; set; }
-            public string createdate { get; set; }
-            public string createdby { get; set; }
-            public string image { get; set; }
-            public string active { get; set; }
+        public string adsid { get; set; }
+        public string adcategoryid { get; set; }
+        public string adtitle { get; set; }
+        public string addescription { get; set; }
+        public string state { get; set; }
+        public string city { get; set; }
+        public string location { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+        public string mobilenumber { get; set; }
+        public string createdate { get; set; }
+        public string createdby { get; set; }
+        public string image { get; set; }
+        public string active { get; set; }
+    }
+    public class profilepostgraduationDTO
+    {
+        public string profilepostgraduationid { get; set; }
+        public string profileid { get; set; }
+        public string postgraduationid { get; set; }
+        public string postgraduationtypeid { get; set; }
+        public string specializationid { get; set; }
+        public string UniversityorInstituteid { get; set; }
+        public string Year { get; set; }
+        public string gradingsystem { get; set; }
+        public string marks { get; set; }
+    }
+    public class profilegraduationdetailsDTO
+    {
+        public string profilegraduationid { get; set; }
+        public string profileid { get; set; }
+        public string graduationid { get; set; }
+        public string graduationtypeid { get; set; }
+        public string specializationid { get; set; }
+        public string UniversityorInstituteid { get; set; }
+        public string Year { get; set; }
+        public string grad { get; set; }
+        public string marks { get; set; }
+    }
+    public class profilehighersecondarydetailsDTO
+    {
+        public string profilehighersecondarydetailsid { get; set; }
+        public string educationboardid { get; set; }
+        public string medium { get; set; }
+        public string profileid { get; set; }
+        public string Year { get; set; }
+        public string marks { get; set; }
+    }
+    public class profilesecondarydetailsDTO
+    {
+        public string profilesecondarydetailsid { get; set; }
+        public string educationboardid { get; set; }
+        public string Year { get; set; }
+        public string medium { get; set; }
+        public string marks { get; set; }
+        public string profileid { get; set; }
     }
 }
