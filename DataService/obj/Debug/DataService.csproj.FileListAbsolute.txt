@@ -54,3 +54,5 @@ F:\Test\crapi\DataService\bin\Debug\DataAccessLayer.pdb
 F:\Test\crapi\DataService\bin\Debug\DataModels.pdb
 F:\Test\crapi\DataService\bin\Debug\DataserviceInterface.pdb
 F:\Test\crapi\DataService\bin\Debug\LogManager.pdb
+F:\Test\crapi\DataService\bin\Debug\Utilities.dll
+F:\Test\crapi\DataService\bin\Debug\Utilities.pdb

@@ -128,4 +128,90 @@ namespace Utilities
         }
 
     }
+    public class DBManager
+    {
+        private string getpostgraduationdetails;
+        public string Getpostgraduationdetails
+        {
+            get { return getpostgraduationdetails; }
+            set { getpostgraduationdetails = value; }
+        }
+
+        private string savepostgraduationdetails;
+        public string Savepostgraduationdetails
+        {
+            get { return savepostgraduationdetails; }
+            set { savepostgraduationdetails = value; }
+        }
+
+        private string getprofiledetails;
+        public string Getprofiledetails
+        {
+            get { return getprofiledetails; }
+            set { getprofiledetails = value; }
+        }
+
+        private string saveprofiledetails;
+        public string Saveprofiledetails
+        {
+            get { return saveprofiledetails; }
+            set { saveprofiledetails = value; }
+        }
+
+        private string getgraduationdetails;
+        public string Getgraduationdetails
+        {
+            get { return getgraduationdetails; }
+            set { getgraduationdetails = value; }
+        }
+
+        private string savegraduationdetails;
+        public string Savegraduationdetails
+        {
+            get { return savegraduationdetails; }
+            set { savegraduationdetails = value; }
+        }
+
+        private string gethighersecondarydetails;
+        public string Gethighersecondarydetails
+        {
+            get { return gethighersecondarydetails; }
+            set { gethighersecondarydetails = value; }
+        }
+
+        private string savehighersecondarydetails;
+        public string Savehighersecondarydetails
+        {
+            get { return savehighersecondarydetails; }
+            set { savehighersecondarydetails = value; }
+        }
+
+        private string getsecondarydetails;
+        public string Getsecondarydetails
+        {
+            get { return getsecondarydetails; }
+            set { getsecondarydetails = value; }
+        }
+
+        private string savesecondarydetails;
+        public string Savesecondarydetails
+        {
+            get { return savesecondarydetails; }
+            set { savesecondarydetails = value; }
+        }
+
+        private string getTutorProfilesDetails;
+        public string GetTutorProfilesDetails
+        {
+            get { return getTutorProfilesDetails; }
+            set { getTutorProfilesDetails = value; }
+        }
+
+        private string saveTutorProfilesDetails;
+        public string SaveTutorProfilesDetails
+        {
+            get { return saveTutorProfilesDetails; }
+            set { saveTutorProfilesDetails = value; }
+        }
+    }
 }

@@ -7,11 +7,13 @@ using DataserviceInterface;
 using DataModels;
 using DataAccessLayer;
 using System.Data;
+using Utilities;
 namespace DataService
 {
     public class profileservice : IProfileService
     {
         BasicProfileDetails objprofile = new BasicProfileDetails();
+        DBManager ObjUtility = new DBManager();
         SqlDataAccess obj = new SqlDataAccess();
         #region "---Profile Basic detail----"
         public List<BasicProfileDetails> GetProfiles()
@@ -20,7 +22,7 @@ namespace DataService
         }
         public DataTable GetProfile(string profileid)
         {
-            string strQuery = "getprofiledetails";
+            string strQuery = ObjUtility.Getprofiledetails;// "getprofiledetails";
             var arrParam = new string[1, 1];
             arrParam[0, 0] = "_profileid";
             arrParam[0, 1] = profileid;
@@ -33,7 +35,7 @@ namespace DataService
         public string SaveProfile(BasicProfileDetails userprofile)
         {
             string profile_id = string.Empty;
-            string strQuery = "saveprofiledetails";
+            string strQuery = ObjUtility.Saveprofiledetails;// "saveprofiledetails";
             var arrParam = new string[17, 2];
             arrParam[0, 0] = "_profileid";
             arrParam[0, 1] = userprofile.ProfileId;
@@ -107,7 +109,7 @@ namespace DataService
         #region"---PostGraduation details-----"
         public DataTable GetPostGraduationDetails(string profileid)
         {
-            string strQuery = "getpostgraduationdetails";
+            string strQuery = ObjUtility.Getpostgraduationdetails; //"getpostgraduationdetails";
             var arrParam = new string[1, 1];
             arrParam[0, 0] = "_profileid";
             arrParam[0, 1] = profileid;
@@ -120,7 +122,7 @@ namespace DataService
         public string SavePostGraduationDetails(profilepostgraduation postgraduation)
         {
             string profile_id = string.Empty;
-            string strQuery = "savepostgraduationdetails";
+            string strQuery = ObjUtility.Savepostgraduationdetails;// "savepostgraduationdetails";
             var arrParam = new string[9, 2];
             arrParam[0, 0] = "_profilepostgraduationid";
             arrParam[0, 1] = postgraduation.profilepostgraduationid;
@@ -166,7 +168,7 @@ namespace DataService
         #region"---Graduation details-----"
         public DataTable GetGraduationDetails(string profileid)
         {
-            string strQuery = "getgraduationdetails";
+            string strQuery = ObjUtility.Getgraduationdetails;// "getgraduationdetails";
             var arrParam = new string[1, 1];
             arrParam[0, 0] = "_profileid";
             arrParam[0, 1] = profileid;
@@ -179,7 +181,7 @@ namespace DataService
         public string SaveGraduationDetails(profilegraduationdetails graduation)
         {
             string profile_id = string.Empty;
-            string strQuery = "savegraduationdetails";
+            string strQuery = ObjUtility.Savegraduationdetails;//"savegraduationdetails";
             var arrParam = new string[9, 2];
             arrParam[0, 0] = "_profilegraduationid";
             arrParam[0, 1] = graduation.profilegraduationid;
@@ -225,7 +227,7 @@ namespace DataService
         #region"---Higher Secondary details-----"
         public DataTable GetHigherSecondaryDetails(string profileid)
         {
-            string strQuery = "gethighersecondarydetails";
+            string strQuery = ObjUtility.Gethighersecondarydetails;// "gethighersecondarydetails";
             var arrParam = new string[1, 1];
             arrParam[0, 0] = "_profileid";
             arrParam[0, 1] = profileid;
@@ -238,7 +240,7 @@ namespace DataService
         public string SaveHigherSecondaryDetails(profilehighersecondarydetails highersecondary)
         {
             string profile_id = string.Empty;
-            string strQuery = "savehighersecondarydetails";
+            string strQuery = ObjUtility.Savehighersecondarydetails;// "savehighersecondarydetails";
             var arrParam = new string[6, 2];
             arrParam[0, 0] = "_profilehighersecondarydetailsid";
             arrParam[0, 1] = highersecondary.profilehighersecondarydetailsid;
@@ -275,7 +277,7 @@ namespace DataService
         #region"---Secondary details-----"
         public DataTable GetSecondaryDetails(string profileid)
         {
-            string strQuery = "getsecondarydetails";
+            string strQuery = ObjUtility.Getsecondarydetails;// "getsecondarydetails";
             var arrParam = new string[1, 1];
             arrParam[0, 0] = "_profileid";
             arrParam[0, 1] = profileid;
@@ -288,7 +290,7 @@ namespace DataService
         public string SaveSecondaryDetails(profilesecondarydetails secondary)
         {
             string profile_id = string.Empty;
-            string strQuery = "savesecondarydetails";
+            string strQuery = ObjUtility.Savesecondarydetails;// "savesecondarydetails";
             var arrParam = new string[6, 2];
             arrParam[0, 0] = "_profilesecondarydetailsid";
             arrParam[0, 1] = secondary.profilesecondarydetailsid;

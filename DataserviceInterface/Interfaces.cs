@@ -58,4 +58,9 @@ namespace DataserviceInterface
         bool SaveAds(postads postads);
     }
 
+    public interface ITutorProfileService
+    {
+        DataTable GetTutorProfilesDetails(string Profileid);
+        string SaveTutorProfilesDetails(TutorProfiles tutorProfiles);
+    }
 }
