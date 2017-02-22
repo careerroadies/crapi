@@ -134,6 +134,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\PostAdsController.cs" />
+    <Compile Include="Controllers\TutorProfileController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">

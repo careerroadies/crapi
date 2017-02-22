@@ -11,13 +11,17 @@ namespace ApplicationService
     public class ProfileBusinessRules : ValidationRules
     {
         IProfileService profiledataservice;
-
+        ITutorProfileService tutorprofiledataservice;
         public void InitializeProfileBusinessRules(BasicProfileDetails profile, IProfileService profileservice)
         {
             profiledataservice = profileservice;
             InitializeValidationRules(profile);
         }
-
+        public void InitializeTutorProfileBusinessRules(TutorProfiles tutorprofile, ITutorProfileService tutorprofileservice)
+        {
+            tutorprofiledataservice = tutorprofileservice;
+            InitializeValidationRules(tutorprofile);
+        }
         public void ValidateProfile(BasicProfileDetails profile, IProfileService profileservice)
         {
             profiledataservice = profileservice;
@@ -73,6 +77,19 @@ namespace ApplicationService
             ValidateRequired("medium", "Medium ");
             ValidateRequired("Year", "Year");
             ValidateRequired("marks", "Marks");
+        }
+        public void ValidateTutorProfile(TutorProfiles tutorprofile, ITutorProfileService tutorprofileservice)
+        {
+            tutorprofiledataservice = tutorprofileservice;
+            InitializeValidationRules(tutorprofile);
+            ValidateRequired("FirstName", "First Name");
+            ValidateRequired("LastName", "Last Name");
+            ValidateRequired("Gender", "Gender");
+            ValidateRequired("state", "State");
+            ValidateRequired("city", "City");
+            ValidateRequired("location", "Location");
+            ValidateEmailAddress("PrimaryEmail", "Primary Email");
+            ValidateEmailAddress("AlternateEmail", "Alternate Email");
         }
     }
 }

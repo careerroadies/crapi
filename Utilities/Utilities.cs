@@ -130,6 +130,22 @@ namespace Utilities
     }
     public class DBManager
     {
+        public DBManager()
+        {
+            getpostgraduationdetails = "getpostgraduationdetails";
+            savepostgraduationdetails = "savepostgraduationdetails";
+            getprofiledetails = "getprofiledetails";
+            saveprofiledetails = "saveprofiledetails";
+            getgraduationdetails = "getgraduationdetails";
+            savegraduationdetails = "savegraduationdetails";
+            gethighersecondarydetails = "gethighersecondarydetails";
+            savehighersecondarydetails = "savehighersecondarydetails";
+            getsecondarydetails = "getsecondarydetails";
+            savesecondarydetails = "savesecondarydetails";
+            saveTutorProfilesDetails = "saveTutorProfilesDetails";
+            getTutorProfilesDetails = "getTutorProfilesDetails";
+
+        }
         private string getpostgraduationdetails;
         public string Getpostgraduationdetails
         {
