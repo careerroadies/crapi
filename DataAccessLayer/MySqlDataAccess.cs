@@ -1,4 +1,12 @@
-﻿using System;
+﻿//----------------------------------------------------------------
+//	Author:					Abhilash Rana
+// 	Last Modifier :			Abhilash Rana
+//	Date Created:			23-August-2010
+//	Last Modified Date:		30-August-2010
+//	---------------------------------------------------------------
+
+
+using System;
 using System.Configuration;
 using System.Data;
 using System.Collections;
@@ -6,18 +14,21 @@ using System.Data.SqlClient;
 using System.Threading;
 using LogManager;
 using log4net;
+using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
-namespace ks.Models
+
+namespace DataAccessLayer
 {
     /// <summary>
     /// Summary description for SqlDataAccess.
     /// </summary>
-    public class SqlDataAccess : IDataAccess
+    public class MySqlDataAccess : IMySqlDataAccess
     {
         ILogManager logger = new LogManager.LogManager();
-        public SqlDataAccess()
+        public MySqlDataAccess()
         {
-            logger.createLogger();
+           logger.createLogger();
         }
 
         /**********************************************************
@@ -33,20 +44,57 @@ namespace ks.Models
         ***********************************************************/
         public int ExecuteNonQuery(string cmdText)
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
             DataSet dsDataSet = new DataSet();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.Text;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
 
                 DateTime dtStart = DateTime.Now;
 
                 Int32 iReturn = oCmd.ExecuteNonQuery();
 
+                TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);  
+
+                return iReturn;
+            }
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+
+        public int ExecuteNonQuery(string cmdText, string[,] arrParam)
+        {
+            MySqlConnection conn = new MySqlConnection();
+            conn = GetConnection();
+            DataSet dsDataSet = new DataSet();
+
+            try
+            {
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
+                oCmd.CommandType = CommandType.StoredProcedure;
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
+
+                for (Int16 i = 0; i < arrParam.GetLength(0); i++)
+                    oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
+
+                DateTime dtStart = DateTime.Now;
+
+                Int32 iReturn = oCmd.ExecuteNonQuery();
+                        
                 TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
                 logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
 
@@ -64,31 +112,45 @@ namespace ks.Models
                 conn.Dispose();
             }
         }
-        public int ExecuteNonQuery(string cmdText, string[,] arrParam)
+
+        public void ExecuteNonQuery(string cmdText, string[,] arrParam, out string ref_id, out string user_id )
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
             DataSet dsDataSet = new DataSet();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
 
                 for (Int16 i = 0; i < arrParam.GetLength(0); i++)
                     oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
 
-                Int32 iReturn = oCmd.ExecuteNonQuery();
 
-                return iReturn;
+                oCmd.Parameters.Add(new MySqlParameter("?_ownrefferalid", MySqlDbType.String));
+                oCmd.Parameters["?_ownrefferalid"].Direction = ParameterDirection.Output;
+
+                oCmd.Parameters.Add(new MySqlParameter("?_userid", MySqlDbType.String));
+                oCmd.Parameters["?_userid"].Direction = ParameterDirection.Output;
+
+                oCmd.ExecuteNonQuery();
+
+                ref_id = oCmd.Parameters["?_ownrefferalid"].Value.ToString();
+                user_id = oCmd.Parameters["?_userid"].Value.ToString();
+
+                DateTime dtStart = DateTime.Now;
+                
+                TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
             }
 
             catch (Exception ex)
             {
+
                 throw ex;
             }
-
             finally
             {
                 conn.Close();
@@ -96,51 +158,48 @@ namespace ks.Models
             }
         }
 
-        public string ExecuteNonQuery(string cmdText, string[,] arrParam, string output, string dbtype, int size)
+        public void ExecuteNonQuery(string cmdText, string[,] arrParam, List<string> arrParamOut, out List<KeyValuePair<string, string>> output)
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
-            SqlDataReader dsReader = null;
-
+            DataSet dsDataSet = new DataSet();
+            output = new List<KeyValuePair<string, string>>();
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
 
                 for (Int16 i = 0; i < arrParam.GetLength(0); i++)
                     oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
 
-                SqlParameter sqlparam;
-                if (dbtype == "int")
-                    sqlparam = new SqlParameter(output, SqlDbType.Int);
-                else
-                    sqlparam = new SqlParameter(output, SqlDbType.VarChar, size);
-
-                sqlparam.Direction = ParameterDirection.Output;
-                oCmd.Parameters.Add(sqlparam);
+                foreach(var item in arrParamOut)
+                {
+                    oCmd.Parameters.Add(new MySqlParameter("?" + item + "", MySqlDbType.String));
+                    oCmd.Parameters["?" + item + ""].Direction = ParameterDirection.Output;
+                }
 
                 oCmd.ExecuteNonQuery();
+                foreach (var item in arrParamOut)
+                {
+                    output.Add(new KeyValuePair<String, String>(item, oCmd.Parameters["?" + item + ""].Value.ToString()));
+                }
+                DateTime dtStart = DateTime.Now;
 
-                if (dbtype == "int")
-                    return Convert.ToString((int)sqlparam.Value);
-                else
-                    return (string)sqlparam.Value;
-
+                TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
             }
-
 
             catch (Exception ex)
             {
+
                 throw ex;
             }
-
             finally
             {
                 conn.Close();
                 conn.Dispose();
             }
-
         }
         /**********************************************************
        Function:			ExecuteScalar	
@@ -155,15 +214,50 @@ namespace ks.Models
        ***********************************************************/
         public object ExecuteScalar(string cmdText)
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
             DataSet dsDataSet = new DataSet();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.Text;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
+
+                DateTime dtStart = DateTime.Now;
+                object oReturn = oCmd.ExecuteScalar();
+
+                TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);  
+
+                return oReturn;
+            }
+
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+        public object ExecuteScalar(string cmdText, string[,] arrParam)
+        {
+            MySqlConnection conn = new MySqlConnection();
+            conn = GetConnection();
+            DataSet dsDataSet = new DataSet();
+
+            try
+            {
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
+                oCmd.CommandType = CommandType.StoredProcedure;
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
+
+                for (Int16 i = 0; i < arrParam.GetLength(0); i++)
+                    oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
 
                 DateTime dtStart = DateTime.Now;
                 object oReturn = oCmd.ExecuteScalar();
@@ -196,19 +290,19 @@ namespace ks.Models
       Returns:			    DataReader
       Notes:			    NIL
       ***********************************************************/
-
+      
         public DataTableReader ExecuteReader(string cmdText, string[,] arrParam, bool IsWithType)
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
-            SqlDataReader dsReader = null;
+            MySqlDataReader dsReader = null;
             DataTable dtTable = new DataTable();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
 
                 if (IsWithType)
                 {
@@ -217,7 +311,7 @@ namespace ks.Models
                             oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
                         else
                             oCmd.Parameters.AddWithValue(arrParam[i, 0], Convert.ToInt32(arrParam[i, 1]));
-
+                   
                 }
                 else
                 {
@@ -265,63 +359,6 @@ namespace ks.Models
             }
 
         }
-        public DataTableReader ExecuteReader(string cmdText, string[,] arrParam)
-        {
-            SqlConnection conn = new SqlConnection();
-            conn = GetConnection();
-            SqlDataReader dsReader = null;
-            DataTable dtTable = new DataTable();
-
-            try
-            {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
-                oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
-
-                for (Int16 i = 0; i < arrParam.GetLength(0); i++)
-                    oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
-                DateTime dtStart = DateTime.Now;
-
-                dsReader = oCmd.ExecuteReader();
-
-                TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
-                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
-
-                int iNumber = dsReader.FieldCount;
-
-                for (int i = 0; i < iNumber; i++)
-                {
-                    dtTable.Columns.Add(dsReader.GetName(i));
-                }
-
-                while (dsReader.Read())
-                {
-                    DataRow dr = dtTable.NewRow();
-                    for (int i = 0; i < iNumber; i++)
-                    {
-                        dr[i] = dsReader[i];
-                    }
-                    dtTable.Rows.Add(dr);
-                }
-
-                return dtTable.CreateDataReader();
-
-            }
-
-
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            finally
-            {
-                conn.Close();
-                conn.Dispose();
-            }
-
-        }
-
         /**********************************************************
     Function:			    ExecuteReader	
     Created By:			Abhilash Rana
@@ -335,24 +372,24 @@ namespace ks.Models
     ***********************************************************/
         public DataTableReader ExecuteReader(string cmdText)
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
-            SqlDataReader dsReader = null;
+            MySqlDataReader dsReader = null;
             DataTable dtTable = new DataTable();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.Text;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
 
                 DateTime dtStart = DateTime.Now;
 
                 dsReader = oCmd.ExecuteReader();
-
+                
                 TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
-                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
-
+                logger.writeDBQueryTime (oCmd.CommandText, dtStart.Second);  
+                
                 int iNumber = dsReader.FieldCount;
 
                 for (int i = 0; i < iNumber; i++)
@@ -401,26 +438,26 @@ namespace ks.Models
        ***********************************************************/
         public DataTable ExecuteDataTable(string cmdText, string[,] arrParam)
         {
-            SqlConnection conn = new SqlConnection();
-            conn = GetConnection();
+            MySqlConnection conn = new MySqlConnection();
+            conn = GetConnection();           
             DataSet ds = new DataSet();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]); 
 
                 for (Int16 i = 0; i < arrParam.GetLength(0); i++)
                     oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
 
                 DateTime dtStart = DateTime.Now;
 
-                SqlDataAdapter daDataAdapter = new SqlDataAdapter(oCmd);
+                MySqlDataAdapter daDataAdapter = new MySqlDataAdapter(oCmd);
                 daDataAdapter.Fill(ds);
-
+                
                 TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
-                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);  
 
                 if (ds != null)
                     return ds.Tables[0];
@@ -443,25 +480,26 @@ namespace ks.Models
             }
 
         }
+
         public DataTable ExecuteDataTable(string cmdText)
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
             DataSet ds = new DataSet();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.Text;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
 
                 DateTime dtStart = DateTime.Now;
 
-                SqlDataAdapter daDataAdapter = new SqlDataAdapter(oCmd);
+                MySqlDataAdapter daDataAdapter = new MySqlDataAdapter(oCmd);
                 daDataAdapter.Fill(ds);
 
                 TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
-                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
+                //logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
 
                 if (ds != null)
                     return ds.Tables[0];
@@ -483,33 +521,6 @@ namespace ks.Models
                 conn.Dispose();
             }
 
-        }
-        public SqlDataReader ExecuteSqlCommand(string theCmd, SqlConnection theConnection)
-        {
-
-            /*  Purpose:To execute Sqlcommand by passing the commandText string along with the open connection string.
-                Parameters: Command Text and the Connection String.
-                Return values: returns Reader
-                Process: The commandtext and connection string is passed to the sqlcommand and ExecuterReader method is called 
-                which executes the query and returns SqlDataReader.
-             */
-
-
-            SqlDataReader reader = null;
-            SqlCommand command = new SqlCommand(theCmd, theConnection);
-            try
-            {
-
-                reader = command.ExecuteReader();
-                //tn.Commit();
-            }
-            catch (Exception ex)
-            {
-                string str = ex.ToString();
-            }
-
-            //tn.Dispose();
-            return reader;
         }
         /**********************************************************
        Function:			ExecuteDataSet	
@@ -524,26 +535,26 @@ namespace ks.Models
        ***********************************************************/
         public DataSet ExecuteDataSet(string cmdText, string[,] arrParam)
         {
-            SqlConnection conn = new SqlConnection();
-            conn = GetConnection();
+            MySqlConnection conn = new MySqlConnection();
+            conn = GetConnection();                       
             DataSet ds = new DataSet();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.StoredProcedure;
-                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]); 
 
                 for (Int16 i = 0; i < arrParam.GetLength(0); i++)
-                    oCmd.Parameters.AddWithValue(arrParam[i, 0], arrParam[i, 1]);
+                    oCmd.Parameters.AddWithValue(arrParam[i, 0], Convert.ToInt32(arrParam[i, 1]));
 
                 DateTime dtStart = DateTime.Now;
 
-                SqlDataAdapter daDataAdapter = new SqlDataAdapter(oCmd);
+                MySqlDataAdapter daDataAdapter = new MySqlDataAdapter(oCmd);
                 daDataAdapter.Fill(ds);
 
                 TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
-                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);  
 
                 return ds;
 
@@ -576,24 +587,23 @@ namespace ks.Models
       ***********************************************************/
         public DataSet ExecuteDataSet(string cmdText)
         {
-            SqlConnection conn = new SqlConnection();
+            MySqlConnection conn = new MySqlConnection();
             conn = GetConnection();
             DataSet ds = new DataSet();
 
             try
             {
-                SqlCommand oCmd = new SqlCommand(cmdText, conn);
+                MySqlCommand oCmd = new MySqlCommand(cmdText, conn);
                 oCmd.CommandType = CommandType.Text;
-                //oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["SQLCommandTimeout"]);
-                oCmd.CommandTimeout = 0;
+                oCmd.CommandTimeout = Convert.ToInt32(ConfigurationSettings.AppSettings["MySqlCommandTimeout"]);
 
                 DateTime dtStart = DateTime.Now;
 
-                SqlDataAdapter daDataAdapter = new SqlDataAdapter(oCmd);
+                MySqlDataAdapter daDataAdapter = new MySqlDataAdapter(oCmd);
                 daDataAdapter.Fill(ds);
 
                 TimeSpan tsTime = DateTime.Now.Subtract(dtStart);
-                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);
+                logger.writeDBQueryTime(oCmd.CommandText, dtStart.Second);  
 
                 return ds;
 
@@ -624,7 +634,7 @@ namespace ks.Models
        Returns:			    NIL
        Notes:			    NIL
        ***********************************************************/
-        public void CloseConn(SqlConnection conn)
+        public void CloseConn(MySqlConnection conn)
         {
             try
             {
@@ -647,16 +657,16 @@ namespace ks.Models
        Modified On:		    NIL
        Purpose:			    This method is used establish connection with SQL DB
        No of Arguments:     0
-       Returns:			    SqlConnection
+       Returns:			    MySqlConnection
        Notes:			    NIL
        ***********************************************************/
-        public SqlConnection GetConnection()
+        public MySqlConnection GetConnection()
         {
             try
             {
                 string str;
-                str = ConfigurationSettings.AppSettings["SQLConnString"];
-                SqlConnection conn = new SqlConnection(str);
+                str = ConfigurationSettings.AppSettings["constr"];
+                MySqlConnection conn = new MySqlConnection(str);
                 conn.Open();
                 return conn;
             }
@@ -665,6 +675,8 @@ namespace ks.Models
                 throw ex;
             }
         }
-
-            }
+       
+          
+      
+    }
 }

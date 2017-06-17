@@ -1,11 +1,18 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
-namespace ks.Models
+using MySql.Data.MySqlClient;
+
+
+namespace DataAccessLayer
 {
-    interface IDataAccess
+    public interface IMySqlDataAccess
     {
-        SqlConnection GetConnection();
-        void CloseConn(SqlConnection conn);
+        MySqlConnection GetConnection();
+        void CloseConn(MySqlConnection conn);
         int ExecuteNonQuery(string cmdText);
         object ExecuteScalar(string cmdText);
         DataTableReader ExecuteReader(string cmdText, string[,] arrParam, bool IsWithType);
@@ -13,5 +20,6 @@ namespace ks.Models
         DataTable ExecuteDataTable(string cmdText, string[,] arrParam);
         DataSet ExecuteDataSet(string cmdText, string[,] arrParam);
         DataSet ExecuteDataSet(string cmdText);
+        
     }
 }
